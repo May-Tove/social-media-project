@@ -1,0 +1,47 @@
+.bi{
+    vertical-align: -.125em;
+
+    &-image{
+        fill: $blue;
+    }
+
+    &-camera-video{
+        fill: $orange;
+    }
+
+    &-paperclip{
+        fill: $green;
+    }
+
+    &-heart{
+        fill: $red;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &-chat{
+        fill: $green;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &-heart-fill{
+        fill: $red;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &-house{
+        fill: $primary;
+    }
+
+    &-person{
+        fill: $primary;
+    }
+}
