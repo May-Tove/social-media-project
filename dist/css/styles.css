@@ -10777,9 +10777,6 @@ textarea.form-control-lg {
   color: #6610f2;
 }
 
-.bi {
-  vertical-align: -0.125em;
-}
 .bi-image {
   fill: #0d6efd;
 }
@@ -10825,7 +10822,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #000;
+  color: #6610f2;
 }
 a.login-link {
   color: #6610f2;
