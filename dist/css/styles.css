@@ -10789,42 +10789,22 @@ textarea.form-control-lg {
 .bi-paperclip {
   fill: #198754;
 }
-.bi-heart {
+.bi-heart, .bi-heart-fill {
   fill: #dc3545;
-}
-.bi-heart:hover {
-  cursor: pointer;
 }
 .bi-chat {
   fill: #198754;
 }
-.bi-chat:hover {
-  cursor: pointer;
-}
-.bi-heart-fill {
-  fill: #dc3545;
-}
-.bi-heart-fill:hover {
-  cursor: pointer;
-}
-.bi-house {
+.bi-house, .bi-person {
   fill: #6610f2;
 }
-.bi-person {
-  fill: #6610f2;
-}
-
-form {
-  width: 100%;
+.bi-heart:hover, .bi-chat:hover, .bi-heart-fill:hover {
+  cursor: pointer;
 }
 
 .form-control {
   border: none;
   background-color: #e9ecef;
-}
-
-main {
-  min-height: 100vh;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {

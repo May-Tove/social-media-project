@@ -13,35 +13,21 @@
         fill: $green;
     }
 
-    &-heart{
+    &-heart, &-heart-fill{
         fill: $red;
-
-        &:hover{
-            cursor: pointer;
-        }
     }
 
     &-chat{
         fill: $green;
-
-        &:hover{
-            cursor: pointer;
-        }
     }
 
-    &-heart-fill{
-        fill: $red;
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
-    &-house{
+    &-house, &-person{
         fill: $primary;
     }
 
-    &-person{
-        fill: $primary;
+    &-heart, &-chat, &-heart-fill{
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
