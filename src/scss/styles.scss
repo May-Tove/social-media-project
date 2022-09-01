@@ -32,4 +32,23 @@ a{
         color: $black;
     }
 
+    &.login-link{
+        color: $primary;
+    }
+
 }
+
+.profile-container{
+    background-size: cover; 
+    width:100%; 
+    height: 200px; 
+    position: relative; 
+    border-radius: 5px;
+}
+
+.profile-img{
+    border: 1px solid white;
+    min-width: 150px;
+    max-width: 200px;
+}
+

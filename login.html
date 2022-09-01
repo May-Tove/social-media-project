@@ -56,18 +56,29 @@
         <section class="my-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-5">
-                        <h1 class="mb-3 mt-5">Login</h1>
-                        <form action="profile.html" class="bg-white p-4 mb-5 rounded">
-                            <div class="my-2">
+                    <div class="col-lg-5 bg-white p-4 mb-5 rounded shadow-sm">
+                        <h1>Login</h1>
+                        <div class="d-flex">
+                            <p class="text-muted mr-1">Do not have an account?</p>
+                            <a href="#"class="login-link">Sign up</a>
+                        </div>
+                        <form action="profile.html">
+                            <div class="my-3">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                             </div>
-                            <div class="my-2">
+                            <div class="mt-4">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" required>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3">Login</button>
+                            <div class="d-flex justify-content-between mt-3">
+                                <div>
+                                    <input type="checkbox" name="" id="rememberMe">
+                                    <label for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="login-link">Forgot your password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-5">Login</button>
                         </form>
                     </div>
                 </div>
