@@ -10764,11 +10764,19 @@ textarea.form-control-lg {
   color: #6610f2;
 }
 .navbar-brand:hover {
-  color: #6610f2;
+  color: #520dc2;
+  text-decoration: none;
 }
 
-.active {
-  font-weight: 600;
+.nav-link {
+  color: #6c757d;
+}
+.nav-link:hover {
+  color: #212529;
+  text-decoration: none;
+}
+.nav-link.active {
+  font-weight: 500;
 }
 
 .btn-primary:hover {
@@ -10804,6 +10812,10 @@ textarea.form-control-lg {
   background-color: #e9ecef;
 }
 
+.search-form {
+  background-color: #dee2e6;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   color: #343a40;
 }
@@ -10818,14 +10830,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #6610f2;
 }
 a:hover {
-  text-decoration: none;
-  color: #6610f2;
-}
-a.login-link {
-  color: #6610f2;
+  text-decoration: underline;
 }
 
 .profile-container {

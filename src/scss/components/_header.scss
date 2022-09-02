@@ -4,13 +4,24 @@
     color: $primary;
 
     &:hover{
-        color: $primary;
+        color: $indigo-600;
+        text-decoration: none;
     }
 }
 
-.active{
-    font-weight: 600;
-}
+.nav-link{
 
+    color: $gray-600;
+
+    &:hover{
+        color: $gray-900;
+        text-decoration: none;
+    }
+
+    &.active{
+        font-weight: 500;
+    }
+
+}
 
 
