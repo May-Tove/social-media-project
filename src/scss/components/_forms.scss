@@ -6,3 +6,10 @@
 .search-form{
     background-color: $gray-300;
 }
+
+
+.login-form{
+    &input{
+        border: 1px solid $gray-800;
+    }
+}
