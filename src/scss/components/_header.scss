@@ -1,0 +1,27 @@
+.navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: $primary;
+
+    &:hover{
+        color: $indigo-600;
+        text-decoration: none;
+    }
+}
+
+.nav-link{
+
+    color: $gray-600;
+
+    &:hover{
+        color: $gray-900;
+        text-decoration: none;
+    }
+
+    &.active{
+        font-weight: 500;
+    }
+
+}
+
+

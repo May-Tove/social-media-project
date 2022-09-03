@@ -1,0 +1,51 @@
+@import "variables.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./components/header";
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/forms";
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $gray-800;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.img-thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.profile-container {
+  background-size: cover;
+  height: 200px;
+}
+
+.profile-img {
+  border: 1px solid $white;
+  max-width: 190px;
+}

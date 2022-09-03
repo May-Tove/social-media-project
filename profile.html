@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile page for Social Media" />
+    <title>Social Media | Profile</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body class="bg-light">
+    <header class="bg-white shadow sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html">Social.</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav align-items-lg-center justify-content-end w-100"
+            >
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="index.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    class="bi bi-house me-1"
+                    aria-label="House icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                    />
+                  </svg>
+                  Home</a
+                >
+              </li>
+              <li class="nav-item mx-lg-3">
+                <a
+                  class="nav-link d-flex align-items-center active"
+                  aria-current="page"
+                  href="profile.html"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    class="bi bi-person me-1"
+                    aria-label="Profile icon"
+                  >
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                    />
+                  </svg>
+                  Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"
+                  ><button class="btn btn-primary">Login</button></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="min-vh-100 my-5">
+      <div class="container col-lg-9">
+        <!-- Profile details -->
+        <div class="row justify-content-center">
+          <div class="col-lg-12 mb-4">
+            <div class="bg-white p-4 rounded shadow-sm">
+              <div
+                class="profile-container position-relative w-100 rounded container d-flex justify-content-center"
+                style="background-image: url(./images/bg-image.jpg)"
+              >
+                <img
+                  src="./images/pfp.jpg"
+                  class="profile-img img-fluid rounded-circle position-absolute top-50 left-50"
+                  alt="Profile picture"
+                />
+              </div>
+              <div class="text-center mt-5 pt-5">
+                <h1 class="mt-2 mb-0">Leila Shaw</h1>
+                <span class="text-muted d-block mb-3">New York</span>
+                <button class="btn btn-primary btn-sm">Connect</button>
+                <button class="btn btn-outline-primary btn-sm">Message</button>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center p-0">
+            <div class="col-lg-4 mb-3">
+              <!-- Connections -->
+              <div class="bg-white p-4 rounded shadow-sm">
+                <h5 class="mb-4">Connections (54)</h5>
+                <div class="d-flex flex-wrap flex-lg-column">
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-1.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">Sarah Jones</h6>
+                  </div>
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-2.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">David Smith</h6>
+                  </div>
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-3.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">Jane Whitlock</h6>
+                  </div>
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-4.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">Lisa Ramos</h6>
+                  </div>
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-5.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">Joe Adams</h6>
+                  </div>
+                  <div
+                    class="col col-sm-2 col-lg-12 d-flex flex-column flex-lg-row align-items-center mb-3 m-2 m-lg-0"
+                  >
+                    <img
+                      class="img-thumbnail rounded-circle mb-2 me-lg-3"
+                      src="./images/pfp-6.jpg"
+                      alt="Profile picture"
+                    />
+                    <h6 class="text-center">Andrea Jones</h6>
+                  </div>
+                </div>
+                <button class="btn btn-sm btn-primary mt-2">View All</button>
+              </div>
+            </div>
+            <div class="col-lg-8 mb-3">
+              <!-- Share a post -->
+              <div class="bg-white p-4 rounded mb-3 shadow-sm">
+                <div class="d-flex border-bottom pb-3">
+                  <img
+                    src="./images/pfp.jpg"
+                    alt="Profile picture"
+                    class="img-thumbnail rounded-circle me-3"
+                  />
+                  <form action="" id="share-form" class="w-100">
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      aria-label="Share a post"
+                      placeholder="Write a post on Leila's wall..."
+                    ></textarea>
+                  </form>
+                </div>
+                <div class="d-flex justify-content-between pt-3">
+                  <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="bi bi-image me-1"
+                        aria-label="Image icon"
+                      >
+                        <path
+                          d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                        <path
+                          d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"
+                        />
+                      </svg>
+                      Image
+                    </div>
+                    <div class="d-flex align-items-center mx-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="bi bi-camera-video me-1"
+                        aria-label="Video camera icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"
+                        />
+                      </svg>
+                      Video
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        class="bi bi-paperclip me-1"
+                        aria-label="Paperclip icon"
+                      >
+                        <path
+                          d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"
+                        />
+                      </svg>
+                      Attachment
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    form="share-form"
+                  >
+                    Post
+                  </button>
+                </div>
+              </div>
+              <!-- My recent posts -->
+              <h5 class="mt-5 mb-3">Recent posts</h5>
+              <!-- Post #1 -->
+              <div class="bg-white p-4 rounded mb-4 shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="img-thumbnail rounded-circle me-3"
+                    src="./images/pfp.jpg"
+                    alt="Profile picture"
+                  />
+                  <div>
+                    <h6 class="m-0">Leila Shaw</h6>
+                    <small class="text-muted m-0">23 min ago</small>
+                  </div>
+                </div>
+                <div class="border-bottom">
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                  </p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div class="d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-heart me-1"
+                      aria-label="Heart icon"
+                    >
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                      />
+                    </svg>
+                    Like
+                  </div>
+                  <div class="d-flex align-items-center mx-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-chat me-1"
+                      aria-label="Chat icon"
+                    >
+                      <path
+                        d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"
+                      />
+                    </svg>
+                    Comment
+                  </div>
+                </div>
+              </div>
+              <!-- Post #2 -->
+              <div class="bg-white p-4 rounded mb-4 shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="img-thumbnail rounded-circle me-3"
+                    src="./images/pfp.jpg"
+                    alt="Profile picture"
+                  />
+                  <div>
+                    <h6 class="m-0">Leila Shaw</h6>
+                    <small class="text-muted m-0">4 hours ago</small>
+                  </div>
+                </div>
+                <div class="border-bottom">
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                  </p>
+                  <img
+                    src="./images/leila-img.jpg"
+                    alt="Image of New York city view"
+                    class="img-fluid rounded mb-3"
+                  />
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div class="d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-heart me-1"
+                      aria-label="Heart icon"
+                    >
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                      />
+                    </svg>
+                    Like
+                  </div>
+                  <div class="d-flex align-items-center mx-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-chat me-1"
+                      aria-label="Chat icon"
+                    >
+                      <path
+                        d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"
+                      />
+                    </svg>
+                    Comment
+                  </div>
+                </div>
+              </div>
+              <!-- Post #3 -->
+              <div class="bg-white p-4 rounded mb-4 shadow-sm">
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="img-thumbnail rounded-circle me-3"
+                    src="./images/pfp.jpg"
+                    alt="Profile picture"
+                  />
+                  <div>
+                    <h6 class="m-0">Leila Shaw</h6>
+                    <small class="text-muted m-0">2 days ago</small>
+                  </div>
+                </div>
+                <div class="border-bottom">
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                  </p>
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin. Cras purus odio, vestibulum
+                    in vulputate at, tempus viverra turpis. Fusce condimentum
+                    nunc ac nisi vulputate fringilla. Donec lacinia congue felis
+                    in faucibus.
+                  </p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <div class="d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-heart me-1"
+                      aria-label="Heart icon"
+                    >
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                      />
+                    </svg>
+                    Like
+                  </div>
+                  <div class="d-flex align-items-center mx-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      class="bi bi-chat me-1"
+                      aria-label="Chat icon"
+                    >
+                      <path
+                        d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"
+                      />
+                    </svg>
+                    Comment
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center bg-white p-4">© 2022 Copyright</div>
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
