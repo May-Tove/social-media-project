@@ -1,15 +1,8 @@
-.form-control{
-    border: none;
-    background-color: $gray-200;
+.form-control {
+  border: none;
+  background-color: $gray-200;
 }
 
-.search-form{
-    background-color: $gray-300;
-}
-
-
-.login-form{
-    &input{
-        border: 1px solid $gray-800;
-    }
+.search-form {
+  background-color: $gray-300;
 }

@@ -7,45 +7,45 @@
 @import "./components/icons";
 @import "./components/forms";
 
-
-h1, h2, h3, h4, h5{
-    color: $gray-800;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $gray-800;
 }
 
-.img-thumbnail{
-    max-width: 70px;
-    max-height: 70px;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
+h1 {
+  font-size: 2rem;
 }
 
-a{
-    text-decoration: none;
-    color: $primary;
-
-    &:hover{
-        text-decoration: underline;
-    }
-
+h2 {
+  font-size: 1.5rem;
 }
 
-.profile-container{
-    background-size: cover; 
-    width: 100%; 
-    height: 200px; 
-    position: relative; 
-    border-radius: 5px;
+.img-thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
-.profile-img{
-    border: 1px solid white;
-    min-width: 150px;
-    max-width: 200px;
+a {
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.login-input{
-    background-color: transparent;
-    border: 1px solid $gray-800;
+.profile-container {
+  background-size: cover;
+  height: 200px;
 }
 
+.profile-img {
+  border: 1px solid $white;
+  max-width: 190px;
+}

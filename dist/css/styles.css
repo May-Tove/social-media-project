@@ -10816,8 +10816,24 @@ textarea.form-control-lg {
   background-color: #dee2e6;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
   color: #343a40;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
 }
 
 .img-thumbnail {
@@ -10838,16 +10854,12 @@ a:hover {
 
 .profile-container {
   background-size: cover;
-  width: 100%;
   height: 200px;
-  position: relative;
-  border-radius: 5px;
 }
 
 .profile-img {
-  border: 1px solid white;
-  min-width: 150px;
-  max-width: 200px;
+  border: 1px solid #fff;
+  max-width: 190px;
 }
 
 /*# sourceMappingURL=styles.css.map */
