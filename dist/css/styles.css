@@ -10816,6 +10816,19 @@ textarea.form-control-lg {
   background-color: #dee2e6;
 }
 
+.img-thumbnail {
+  max-width: 70px;
+  max-height: 70px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-img {
+  border: 1px solid #fff;
+  max-width: 190px;
+}
+
 h1, .h1,
 h2,
 .h2,
@@ -10836,14 +10849,6 @@ h2, .h2 {
   font-size: 1.5rem;
 }
 
-.img-thumbnail {
-  max-width: 70px;
-  max-height: 70px;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
   color: #6610f2;
@@ -10855,11 +10860,6 @@ a:hover {
 .profile-container {
   background-size: cover;
   height: 200px;
-}
-
-.profile-img {
-  border: 1px solid #fff;
-  max-width: 190px;
 }
 
 /*# sourceMappingURL=styles.css.map */

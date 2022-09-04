@@ -6,6 +6,7 @@
 @import "./components/buttons";
 @import "./components/icons";
 @import "./components/forms";
+@import "./components/images";
 
 h1,
 h2,
@@ -23,14 +24,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-.img-thumbnail {
-  max-width: 70px;
-  max-height: 70px;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
   color: $primary;
@@ -43,9 +36,4 @@ a {
 .profile-container {
   background-size: cover;
   height: 200px;
-}
-
-.profile-img {
-  border: 1px solid $white;
-  max-width: 190px;
 }
