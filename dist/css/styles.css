@@ -10785,6 +10785,14 @@ textarea.form-control-lg {
   color: #6610f2;
 }
 
+#edit-btn {
+  background-color: transparent;
+}
+
+.media-attachment {
+  background-color: transparent;
+}
+
 .bi-image {
   fill: #0d6efd;
 }
@@ -10794,13 +10802,13 @@ textarea.form-control-lg {
 .bi-paperclip {
   fill: #198754;
 }
-.bi-heart, .bi-heart-fill {
+.bi-heart, .bi-heart-fill, .bi-trash3 {
   fill: #dc3545;
 }
 .bi-chat {
   fill: #198754;
 }
-.bi-house, .bi-person {
+.bi-house, .bi-person, .bi-pencil-square {
   fill: #6610f2;
 }
 .bi-heart:hover, .bi-chat:hover, .bi-heart-fill:hover {
@@ -10816,17 +10824,34 @@ textarea.form-control-lg {
   background-color: #dee2e6;
 }
 
+.user-form {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+}
+
 .img-thumbnail {
-  max-width: 70px;
-  max-height: 70px;
-  border: 0;
+  width: 70px;
+  height: 70px;
+  border: 0.5px solid #dee2e6;
   padding: 0;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .profile-img {
   border: 1px solid #fff;
   max-width: 190px;
+}
+
+.img-fluid {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.nav-img {
+  width: 40px;
+  height: 40px;
 }
 
 h1, .h1,
@@ -10860,6 +10885,22 @@ a:hover {
 .profile-container {
   background-size: cover;
   height: 200px;
+}
+
+.login-response {
+  color: #b02a37;
+}
+
+.post-link {
+  color: #343a40;
+}
+.post-link:hover {
+  color: #343a40;
+  text-decoration: none;
+}
+
+.media-attachment {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
