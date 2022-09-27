@@ -1,31 +1,37 @@
-.bi{
-    &-image{
-        fill: $blue;
-    }
+.bi {
+  &-image {
+    fill: $blue;
+  }
 
-    &-camera-video{
-        fill: $orange;
-    }
+  &-camera-video {
+    fill: $orange;
+  }
 
-    &-paperclip{
-        fill: $green;
-    }
+  &-paperclip {
+    fill: $green;
+  }
 
-    &-heart, &-heart-fill{
-        fill: $red;
-    }
+  &-heart,
+  &-heart-fill,
+  &-trash3 {
+    fill: $red;
+  }
 
-    &-chat{
-        fill: $green;
-    }
+  &-chat {
+    fill: $green;
+  }
 
-    &-house, &-person{
-        fill: $primary;
-    }
+  &-house,
+  &-person,
+  &-pencil-square {
+    fill: $primary;
+  }
 
-    &-heart, &-chat, &-heart-fill{
-        &:hover{
-            cursor: pointer;
-        }
+  &-heart,
+  &-chat,
+  &-heart-fill {
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
