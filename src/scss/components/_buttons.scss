@@ -6,10 +6,16 @@
   }
 }
 
-#edit-btn {
+#edit-btn,
+#delete-btn {
   background-color: transparent;
 }
 
 .media-attachment {
   background-color: transparent;
+}
+
+#dropdownBtn {
+  background-color: transparent;
+  border: 0;
 }

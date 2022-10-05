@@ -54,3 +54,11 @@ a {
 .media-attachment {
   cursor: pointer;
 }
+
+.error-container {
+  background-color: $red-500;
+}
+
+.auth-error {
+  color: $red;
+}

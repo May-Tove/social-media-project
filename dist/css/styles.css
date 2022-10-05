@@ -10758,8 +10758,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
 .navbar-brand {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   color: #6610f2;
 }
@@ -10768,24 +10776,31 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
-.nav-link {
-  color: #6c757d;
+.navbar-nav .nav-link {
+  color: #343a40;
 }
-.nav-link:hover {
-  color: #212529;
+.navbar-nav .nav-link:hover {
+  color: #6610f2;
   text-decoration: none;
 }
-.nav-link.active {
+.navbar-nav .nav-link.active {
+  color: #6610f2;
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  .navbar-brand {
+    font-size: 30px;
+  }
+}
 .btn-primary:hover {
   background-color: transparent;
   border: 1px solid #6610f2;
   color: #6610f2;
 }
 
-#edit-btn {
+#edit-btn,
+#delete-btn {
   background-color: transparent;
 }
 
@@ -10793,20 +10808,25 @@ textarea.form-control-lg {
   background-color: transparent;
 }
 
+#dropdownBtn {
+  background-color: transparent;
+  border: 0;
+}
+
 .bi-image {
   fill: #0d6efd;
 }
-.bi-camera-video {
+.bi-tag {
   fill: #fd7e14;
-}
-.bi-paperclip {
-  fill: #198754;
 }
 .bi-heart, .bi-heart-fill, .bi-trash3 {
   fill: #dc3545;
 }
 .bi-chat {
   fill: #198754;
+}
+.bi-three-dots {
+  fill: #495057;
 }
 .bi-house, .bi-person, .bi-pencil-square {
   fill: #6610f2;
@@ -10820,18 +10840,18 @@ textarea.form-control-lg {
   background-color: #e9ecef;
 }
 
-.search-form {
-  background-color: #dee2e6;
-}
-
 .user-form {
   background-color: #fff;
   border: 1px solid #ced4da;
 }
 
+#searchForm {
+  width: 270px;
+}
+
 .img-thumbnail {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 0.5px solid #dee2e6;
   padding: 0;
   cursor: pointer;
@@ -10841,6 +10861,8 @@ textarea.form-control-lg {
 .profile-img {
   border: 1px solid #fff;
   max-width: 190px;
+  width: 190px;
+  height: 190px;
 }
 
 .img-fluid {
@@ -10850,8 +10872,12 @@ textarea.form-control-lg {
 }
 
 .nav-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.error-img {
+  max-width: 40px;
 }
 
 h1, .h1,
@@ -10888,7 +10914,7 @@ a:hover {
 }
 
 .login-response {
-  color: #b02a37;
+  color: shade-color(#dc3545, 20%);
 }
 
 .post-link {
@@ -10901,6 +10927,14 @@ a:hover {
 
 .media-attachment {
   cursor: pointer;
+}
+
+.error-container {
+  background-color: #dc3545;
+}
+
+.auth-error {
+  color: #dc3545;
 }
 
 /*# sourceMappingURL=styles.css.map */

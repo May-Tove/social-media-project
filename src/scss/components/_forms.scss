@@ -3,11 +3,11 @@
   background-color: $gray-200;
 }
 
-.search-form {
-  background-color: $gray-300;
-}
-
 .user-form {
   background-color: $white;
   border: 1px solid $gray-400;
+}
+
+#searchForm {
+  width: 270px;
 }

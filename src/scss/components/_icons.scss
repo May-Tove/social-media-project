@@ -3,12 +3,8 @@
     fill: $blue;
   }
 
-  &-camera-video {
+  &-tag {
     fill: $orange;
-  }
-
-  &-paperclip {
-    fill: $green;
   }
 
   &-heart,
@@ -19,6 +15,10 @@
 
   &-chat {
     fill: $green;
+  }
+
+  &-three-dots {
+    fill: $gray-700;
   }
 
   &-house,
