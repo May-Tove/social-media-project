@@ -1,4 +1,4 @@
-const singlePostContainer = document.querySelector("#post-container");
+/*const singlePostContainer = document.querySelector("#post-container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -36,6 +36,7 @@ function displayPost(post) {
   } else {
     avatar = post.author.avatar;
   }
+
   singlePostContainer.innerHTML = `<article class="bg-white p-4 rounded mb-4 shadow-sm">
           <div class="d-flex mb-3 justify-content-between">
           <div class="d-flex align-items-center">
@@ -96,29 +97,50 @@ function displayPost(post) {
                 />
               </svg>
               Comment
-            </div>
+            </div>       
           </div>
+          <div class="d-flex align-items-center pt-3">
+          <small class="me-4 mb-2"><strong>${post._count.reactions}</strong> Reactions</small>
+        </div>
+        <div class="comment-section mt-4"></div>
+        <div>
+        <form
+        method="POST"
+        id="comment-form"
+        class="w-100 mt-4 d-flex flex-column justify-content-end"
+      >
+        <textarea
+          class="form-control"
+          rows="2"
+          aria-label="Write a comment"
+          placeholder="Leave a comment..."
+          required
+          id="post-input"
+        ></textarea>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-sm btn-primary mt-1">
+            Comment
+          </button>
+        </div>
+      </form>
+      </div>
+   
 
         </article>`;
-}
 
-/*
-          <div class="mt-5">
-          <div class="d-flex">
-          <p class="me-5">Reactions ${post._count.reactions}</p>
-          <p>Comments ${post._count.comments}</p>
-          </div>
-          <div class="d-flex align-items-center">
-          <img
-            class="img-thumbnail rounded-circle me-3"
-            src="${post.author.avatar}"
-            alt="Profile picture"
-          />
-          <div>
-            <h6 class="m-0">${post.comments[0].owner}</h6>
-            <small class="text-muted m-0">${post.comments[0].created}</small>
-          </div>
-          </div>
-          <p class="mt-3">${post.comments[0].body}</p>
-          </div>
-*/
+  const commentSection = document.querySelector(".comment-section");
+  if (post._count.comments === 0) {
+    commentSection.innerHTML = `<p>No comments</p>`;
+  } else {
+    commentSection.innerHTML = ` 
+    <h6 class="border-bottom pb-2">Comments</h6>
+    <div class="border-bottom">
+      <div class="d-flex align-items-center">          
+        <h6 class="me-2 mb-3">${post.comments[0].owner}</h6>
+        <p class="text-muted mb-3">Commented on:${post.comments[0].created}</p>
+      </div>
+        <p>${post.comments[0].body}</p>
+    </div>
+ `;
+  }
+}*/
