@@ -1,15 +1,9 @@
+// storing value in localStorage
 export const store = (key, value) =>
   localStorage.setItem(key, JSON.stringify(value));
 
+// getting value from localStorage
 export const get = (key) => JSON.parse(localStorage.getItem(key));
 
-/*export function get(key) {
-  try {
-    const value = localStorage.getItem(key);
-    return JSON.parse(value);
-  } catch {
-    return null;
-  }
-}*/
-
+// removing value from localStorage
 export const remove = (key) => localStorage.removeItem(key);
