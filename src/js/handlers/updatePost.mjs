@@ -1,4 +1,4 @@
-/*import { getPost, updatePost } from "../api/posts/index.mjs";
+import { getPost, updatePost } from "../api/posts/index.mjs";
 
 export async function updatePostListener() {
   const form = document.querySelector("#editForm");
@@ -12,7 +12,6 @@ export async function updatePostListener() {
     form.body.value = post.body;
     form.tags.value = post.tags;
     form.media.value = post.media;
-    console.log(form.title);
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -24,4 +23,4 @@ export async function updatePostListener() {
       updatePost(post);
     });
   }
-}*/
+}

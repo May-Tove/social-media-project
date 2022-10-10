@@ -16,5 +16,9 @@ export async function updatePost(postData) {
     body: JSON.stringify(postData),
   });
 
+  if (response.ok) {
+    location.reload();
+  }
+
   return await response.json();
 }
