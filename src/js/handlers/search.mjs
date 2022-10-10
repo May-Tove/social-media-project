@@ -1,5 +1,5 @@
 import { postTemplate } from "../templates/post.mjs";
-import { displayError } from "../components/error.js";
+import { noResultError } from "../components/error.js";
 import * as postMethods from "../api/posts/index.mjs";
 
 const searchInput = document.querySelector("#search-input");
@@ -12,21 +12,29 @@ const searchInput = document.querySelector("#search-input");
  * searchInput.addEventListener("keyup", handleSearch);
  * ```
  */
-export function handleSearch(event) {
-  const inputValue = event.currentTarget.value.toLowerCase();
-  const searchResult = post.filter(
+export async function handleSearch(e) {
+  const inputValue = e.target.value.toLowerCase();
+
+  const posts = await postMethods.getPosts();
+
+  const searchResult = posts.filter(
     (post) =>
       post.title.toLowerCase().includes(inputValue) ||
       post.body.toLowerCase().includes(inputValue) ||
       post.author.name.toLowerCase().includes(inputValue)
   );
 
+  const postsContainer = document.querySelector("#feed-container");
   if (searchResult.length === 0) {
-    const postsContainer = document.querySelector("#feed-container");
-    postsContainer.innerHTML = displayError("No results found");
+    postsContainer.innerHTML = noResultError("No results found");
   } else {
-    postTemplate(searchResult);
+    postsContainer.innerHTML = "";
+    searchResult.forEach((post) => {
+      postsContainer.innerHTML += postTemplate(post);
+    });
   }
 }
 
-searchInput.addEventListener("keyup", handleSearch);
+if (searchInput) {
+  searchInput.addEventListener("keyup", handleSearch);
+}
