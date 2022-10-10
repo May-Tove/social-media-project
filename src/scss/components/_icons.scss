@@ -35,3 +35,17 @@
     }
   }
 }
+
+.fa {
+  &-image {
+    color: $orange;
+  }
+  &-tag,
+  &-hand-spock {
+    color: $primary;
+  }
+
+  &-comment {
+    color: $green;
+  }
+}

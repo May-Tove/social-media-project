@@ -1,6 +1,10 @@
 .form-control {
   border: none;
   background-color: $gray-200;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .user-form {

@@ -15,7 +15,15 @@
   background-color: transparent;
 }
 
-#dropdownBtn {
+#dropdownBtn,
+#interactionBtn,
+.username-container,
+#backBtn {
   background-color: transparent;
   border: 0;
+}
+
+#editProfileBtn {
+  bottom: 1rem;
+  left: 1rem;
 }
