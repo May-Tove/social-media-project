@@ -1,4 +1,5 @@
 import { api_social_url } from "../constants.mjs";
+import { authError } from "../../components/error.js";
 
 const endpoint = "/auth/register";
 const method = "post";
@@ -16,9 +17,10 @@ export async function register(profile) {
     body,
   });
 
+  //Show error message if register failed or be redirected to login if register succeed
   if (!response.ok) {
     responseContainer.classList.remove("d-none");
-    responseContainer.innerHTML = "<p>User already exists</p>";
+    responseContainer.innerHTML = authError("User already exists");
   } else {
     window.location = "../../../../profile/login/index.html";
   }
