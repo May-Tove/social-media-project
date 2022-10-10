@@ -16,5 +16,9 @@ export async function updateProfile(profileData) {
     body: JSON.stringify(profileData),
   });
 
+  if (response.ok) {
+    location.reload();
+  }
+
   return await response.json();
 }

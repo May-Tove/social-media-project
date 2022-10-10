@@ -5,7 +5,7 @@ export async function updateProfileListener() {
   const form = document.querySelector("#editProfile");
 
   if (form) {
-    const { name, email } = get("profile");
+    const { name, email } = get("user");
     form.name.value = name;
     form.email.value = email;
 
@@ -19,6 +19,9 @@ export async function updateProfileListener() {
       const form = e.target;
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
+
+      profile.name = name;
+      profile.email = email;
 
       updateProfile(profile);
     });
