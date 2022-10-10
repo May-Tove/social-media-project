@@ -14,6 +14,12 @@ export async function removePost(id) {
   const response = await fetchWithAuth(deletePostUrl, {
     method,
   });
+  console.log(response);
+
+  if (response.ok) {
+    window.alert("Post deleted");
+    location.replace(document.referrer);
+  }
 
   return await response.json();
 }

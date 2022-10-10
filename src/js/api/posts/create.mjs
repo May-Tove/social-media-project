@@ -12,6 +12,12 @@ export async function createPost(postData) {
     body: JSON.stringify(postData),
   });
 
+  const form = document.querySelector("#createForm");
+  if (response.ok) {
+    location.reload();
+    form.reset();
+  }
+
   return await response.json();
 }
 
