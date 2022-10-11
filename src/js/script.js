@@ -15,3 +15,4 @@ listeners.createPostFormListener();
 listeners.updatePostListener();
 listeners.removePostListener();
 listeners.updateProfileListener();
+listeners.createCommentFormListener();
