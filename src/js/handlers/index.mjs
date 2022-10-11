@@ -5,4 +5,5 @@ export * from "./updatePost.mjs";
 export * from "./updateProfile.mjs";
 export * from "./removePost.mjs";
 export * from "./search.mjs";
-export * from "./filter.mjs";
+export * from "./sort.mjs";
+export * from "./createComment.mjs";
