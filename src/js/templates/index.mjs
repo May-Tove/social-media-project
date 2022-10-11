@@ -3,3 +3,4 @@ export * from ".//commentSection.mjs";
 export * from "./profile.mjs";
 export * from "./followers.mjs";
 export * from "./createComment.mjs";
+export * from "./postOptions.mjs";
