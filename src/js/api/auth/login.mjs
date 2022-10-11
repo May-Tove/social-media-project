@@ -6,6 +6,10 @@ const endpoint = "/auth/login";
 const method = "post";
 const responseContainer = document.querySelector(".response-container");
 
+/**
+ * This will log in a registered user
+ * @param {object} profile the values from the log in form will create this object when logging in
+ */
 export async function login(profile) {
   const loginUrl = api_social_url + endpoint;
   const body = JSON.stringify(profile);

@@ -1,3 +1,4 @@
+// not in use at the moment, not done yet
 export const followersTemplate = (followers) => {
   return `
       <div

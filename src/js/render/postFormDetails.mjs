@@ -1,5 +1,8 @@
 import { getProfile } from "../api/profile/getProfile.mjs";
 
+/**
+ * Displaying avatar of the logged in user in the "create post" form
+ */
 export async function renderFormAvatar() {
   const profile = await getProfile();
   const userName = profile.name;

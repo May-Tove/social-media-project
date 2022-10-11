@@ -1,11 +1,10 @@
 import { register } from "../api/auth/register.mjs";
 
 /**
- * API call that signup new users
- * @param {string} url
- * @param {any} userData
+ * API call that register new users
+ * @param {object} user
  * ```js
- * signupUser(signupUrl, newUser);
+ * register(user);
  * ```
  */
 export function registerFormListener() {

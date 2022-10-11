@@ -4,6 +4,17 @@ import { fetchWithAuth } from "../fetchWithToken.mjs";
 const endpoint = "/posts";
 const method = "delete";
 
+/**
+ * Delete post using DELETE method
+ * @param {number} id
+ * @example
+ * ```js
+ * // When clicking delete button, the function will be called, deleting the post by id
+ *  deleteBtn.addEventListener("click", () => {
+      removePost(id);
+    });
+ * ```
+ */
 export async function removePost(id) {
   if (!id) {
     throw new Error("Delete requires a postID");

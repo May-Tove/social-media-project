@@ -1,5 +1,8 @@
 import { getProfile } from "../api/profile/getProfile.mjs";
 
+/**
+ * Displaying avatar and username of the logged in user in the header link
+ */
 export async function getUserHeaderDetails() {
   const profile = await getProfile();
   const userName = profile.name;

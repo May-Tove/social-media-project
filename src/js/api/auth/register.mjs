@@ -5,6 +5,13 @@ const endpoint = "/auth/register";
 const method = "post";
 const responseContainer = document.querySelector(".response-container");
 
+/**
+ * API call that signup new users
+ * @param {string} profile
+ * ```js
+ * signupUser(signupUrl, newUser);
+ * ```
+ */
 export async function register(profile) {
   const registerUrl = api_social_url + endpoint;
   const body = JSON.stringify(profile);

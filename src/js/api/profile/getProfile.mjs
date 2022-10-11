@@ -4,6 +4,11 @@ import { fetchWithAuth } from "../fetchWithToken.mjs";
 
 const endpoint = "/profiles";
 
+/**
+ *
+ * @param {String} name
+ * @returns
+ */
 export async function getProfile(name = get("user").name) {
   if (!name) {
     throw new Error("Get requires a name");

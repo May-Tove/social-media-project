@@ -4,6 +4,26 @@ import { fetchWithAuth } from "../fetchWithToken.mjs";
 const endpoint = "/posts?_author=true&_comments=true&reactions=true";
 const method = "post";
 
+/**
+ * Creating a post using POST method
+ * @param {object} postData
+ * @returns A new post to the API
+ * @example
+ * ```js
+ * // When form is submitted, the function will be called.
+ * // Entries from the form will be created as a new post to the API
+ *     form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+        const post = Object.fromEntries(formData.entries());
+
+        // calling the function
+        createPost(post);
+    });
+ * ```
+ */
 export async function createPost(postData) {
   const createPostUrl = api_social_url + endpoint;
 

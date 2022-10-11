@@ -1,5 +1,9 @@
 import { get } from "../storage/index.mjs";
 
+/**
+ *
+ * @returns
+ */
 export function headers() {
   const token = get("token");
 
@@ -9,6 +13,12 @@ export function headers() {
   };
 }
 
+/**
+ *
+ * @param {String} url
+ * @param {*} options
+ * @returns
+ */
 export async function fetchWithAuth(url, options = {}) {
   try {
     return fetch(url, {

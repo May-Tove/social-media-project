@@ -1,5 +1,9 @@
 import { login } from "../api/auth/login.mjs";
 
+/**
+ * This will log in a registered user when clicking the log in button
+ *
+ */
 export function loginFormListener() {
   const form = document.querySelector("#loginForm");
 

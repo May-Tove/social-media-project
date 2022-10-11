@@ -1,8 +1,11 @@
 import { getPosts } from "../api/posts/getPosts.mjs";
 import { get } from "../storage/index.mjs";
-import { postTemplate } from "../templates/post.mjs";
+import * as templates from "../templates/post.mjs";
 import { noResultError } from "../components/error.js";
 
+/**
+ * Displaying posts created of the logged in user on the page using API call
+ */
 export async function renderProfilePosts() {
   const postsContainer = document.querySelector("#user-post-container");
 
@@ -19,10 +22,8 @@ export async function renderProfilePosts() {
       postsContainer.innerHTML = noResultError("No posts yet :(");
     } else {
       result.forEach((post) => {
-        postsContainer.innerHTML += postTemplate(post);
+        postsContainer.innerHTML += templates.postTemplate(post);
       });
-
-      console.log(result);
     }
   }
 }

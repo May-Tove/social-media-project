@@ -3,6 +3,10 @@ import * as template from "../templates/index.mjs";
 
 const sortSelector = document.querySelector("#sort-posts");
 
+/**
+ *
+ * @param {*} e
+ */
 export async function sortPosts(e) {
   const sortSelected = e.target.value;
 

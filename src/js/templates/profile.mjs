@@ -1,3 +1,4 @@
+// template for profile details
 export const profileTemplate = (profile) => {
   let avatar = "";
   if (profile.avatar === "") {
