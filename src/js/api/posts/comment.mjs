@@ -5,8 +5,8 @@ const endpoint = "/posts";
 const method = "post";
 
 /**
- *
- * @param {*} postData
+ * Create a comment to a post using POST method
+ * @param {object} postData
  * @returns
  */
 export async function createComment(postData) {
