@@ -16,3 +16,4 @@ listeners.updatePostListener();
 listeners.removePostListener();
 listeners.updateProfileListener();
 listeners.createCommentFormListener();
+listeners.reactToPostListener();

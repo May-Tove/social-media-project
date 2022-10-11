@@ -7,3 +7,4 @@ export * from "./removePost.mjs";
 export * from "./search.mjs";
 export * from "./sort.mjs";
 export * from "./createComment.mjs";
+export * from "./reactToPost.mjs";

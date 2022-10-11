@@ -40,7 +40,7 @@ export const postTemplate = (post) => {
       </a>
       <span class="badge rounded-pill text-bg-secondary mb-3">${post.tags}</span>
       <div class="d-flex align-items-center border-top pt-3">
-        <button class="d-flex align-items-center" id="interactionBtn">
+        <button class="d-flex align-items-center like-btn" id="interactionBtn">
         <i class="fa-regular fa-thumbs-up me-1"></i>
           Like (${post._count.reactions})
         </button>
