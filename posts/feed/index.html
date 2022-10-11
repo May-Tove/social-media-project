@@ -21,18 +21,6 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand m-0 me-md-5" href="index.html">Social</a>
-          <!--<form class="pe-0 input-group" role="search" id="searchForm">
-            <span class="input-group-text border-0">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <input
-              type="search"
-              class="form-control search-form"
-              placeholder="Search posts..."
-              aria-label="Search"
-              id="search-input"
-            />
-          </form>-->
           <button
             class="navbar-toggler p-0"
             type="button"
@@ -88,51 +76,6 @@
     <main class="min-vh-100">
       <div class="container my-5">
         <div class="row justify-content-center">
-          <div class="col-lg-auto">
-            <div class="mt-5 p-2">
-              <form class="pe-0 input-group" role="search" id="searchForm">
-                <span class="input-group-text border-0">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <input
-                  type="search"
-                  class="form-control search-form"
-                  placeholder="Search posts..."
-                  aria-label="Search"
-                  id="search-input"
-                />
-              </form>
-            </div>
-            <div class="bg-white rounded p-4 shadow-sm my-3">
-              <p class="fw-semiold">
-                <i class="fa-solid fa-sliders"></i> Filters
-              </p>
-              <div class="form-check form-check-reverse">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Newest
-                </label>
-              </div>
-              <div class="form-check form-check-reverse">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
-                />
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Oldest
-                </label>
-              </div>
-            </div>
-          </div>
-
           <!---------- CREATE POST FORM ---------->
           <div class="col-lg-7">
             <h1 class="mb-3">Create a post</h1>
@@ -180,7 +123,7 @@
                 class="d-flex flex-column flex-sm-row justify-content-between pt-3"
               >
                 <div
-                  class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0"
+                  class="d-flex align-items-center justify-content-start mb-3 mb-sm-0"
                 >
                   <button
                     type="button"
@@ -210,6 +153,20 @@
               </div>
             </div>
 
+            <div class="my-5">
+              <form class="input-group w-100" role="search" id="searchForm">
+                <span class="input-group-text border-0">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="search"
+                  class="form-control search-form"
+                  placeholder="Search posts.."
+                  aria-label="Search"
+                  id="search-input"
+                />
+              </form>
+            </div>
             <!---------- FEED ---------->
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h2 class="col-auto p-0">Activity feed</h2>
