@@ -1,5 +1,5 @@
 import { api_social_url } from "../constants.mjs";
-import { authError } from "../../components/error.js";
+import { authError } from "../../components/error.mjs";
 
 const endpoint = "/auth/register";
 const method = "post";

@@ -1,5 +1,5 @@
 import { postTemplate } from "../templates/post.mjs";
-import { noResultError } from "../components/error.js";
+import { noResultError } from "../components/error.mjs";
 import * as postMethods from "../api/posts/index.mjs";
 
 const searchInput = document.querySelector("#search-input");

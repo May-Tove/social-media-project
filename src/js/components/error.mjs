@@ -24,7 +24,7 @@ export function displayError(message = "Unknown error") {
  * ```
  */
 export function noResultError(message = "No result") {
-  return ` <div class="p-4 flex-column justify-content-center align-items-center mt-3">
+  return ` <div class="p-4 flex-column justify-content-center align-items-center mt-5">
   <h6 class="mb-0 text-muted text-center">${message}</h6>
   </div>`;
 }

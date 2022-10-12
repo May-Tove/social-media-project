@@ -1,5 +1,5 @@
 import { api_social_url } from "../constants.mjs";
-import { authError } from "../../components/error.js";
+import { authError } from "../../components/error.mjs";
 import * as storage from "../../storage/index.mjs";
 
 const endpoint = "/auth/login";

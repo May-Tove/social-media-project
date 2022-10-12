@@ -1,6 +1,6 @@
 import * as postMethods from "../api/posts/index.mjs";
 import * as templates from "../templates/index.mjs";
-import { noResultError } from "../components/error.js";
+import { noResultError } from "../components/error.mjs";
 import { get } from "../storage/index.mjs";
 
 /**
