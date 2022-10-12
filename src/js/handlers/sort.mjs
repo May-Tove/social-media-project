@@ -2,6 +2,7 @@ import * as postMethods from "../api/posts/index.mjs";
 import * as template from "../templates/index.mjs";
 
 const sortSelector = document.querySelector("#sort-posts");
+let sortedPosts = [];
 
 /**
  *
@@ -12,27 +13,28 @@ export async function sortPosts(e) {
 
   const posts = await postMethods.getPosts();
 
-  let sortedPosts = [];
-
-  if (sortSelected.value === "all") {
+  if (sortSelected === "newest") {
     sortedPosts = posts;
-  } else if (sortSelected.value === "reactions") {
+  } else if (sortSelected === "reactions") {
     sortedPosts = posts.sort((a, b) => {
       return b._count.reactions - a._count.reactions;
     });
-  } else if (sortSelected.value === "comments") {
+  } else if (sortSelected === "comments") {
     sortedPosts = posts.sort((a, b) => {
       return b._count.comments - a._count.comments;
+    });
+  } else if (sortSelected === "oldest") {
+    sortedPosts = posts.sort((a, b) => {
+      return new Date(a.created) - new Date(b.created);
     });
   }
 
   const postsContainer = document.querySelector("#feed-container");
   if (postsContainer) {
     postsContainer.innerHTML = "";
-
     sortedPosts.forEach((post) => {
       postsContainer.innerHTML += template.postTemplate(post);
-      console.log(sortedPosts);
+      console.log(post);
     });
   }
 }
