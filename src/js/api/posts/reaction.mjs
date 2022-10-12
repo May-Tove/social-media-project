@@ -7,12 +7,12 @@ const method = "put";
 /**
  * Reacting to a post
  */
-export async function reaction(postData) {
-  if (!postData.id) {
-    throw new Error("Update requires a postID");
+export async function reaction(id) {
+  if (!id) {
+    throw new Error("Reaction requires a postID");
   }
 
-  const reactionUrl = `${api_social_url}${endpoint}/${postData.id}/👍`;
+  const reactionUrl = `${api_social_url}${endpoint}/${id}/react/👍`;
 
   const response = await fetchWithAuth(reactionUrl, {
     method,

@@ -1,23 +1,22 @@
 import { getPosts, reaction } from "../api/posts/index.mjs";
 
 /**
- *
+ * NOT WORKING
  */
 export async function reactToPostListener() {
-  const likeBtn = document.querySelector(".like-btn");
-  console.log(likeBtn);
+  const posts = await getPosts();
 
-  const url = new URL(location.href);
-  const id = url.searchParams.get("id");
+  posts.forEach((post) => {
+    const id = post.id;
+  });
+
+  const likeBtn = document.querySelectorAll(".like-btn");
 
   if (likeBtn) {
-    const post = await getPosts(id);
-    post.id = id;
-
     likeBtn.forEach((button) => {
       button.addEventListener("click", () => {
-        reaction(id);
         console.log("clicked");
+        reaction(id);
       });
     });
   }
