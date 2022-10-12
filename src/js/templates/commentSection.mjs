@@ -9,10 +9,10 @@ export const commentTemplate = (comment) => {
   let datePosted = `${day}.${month}.${year}`;
 
   return `
-    <div class="border-bottom">
-      <div class="d-flex align-items-center my-3">          
-        <p class="me-2 mb-1 fw-semibold">${comment.owner}</p>
-        <p class="text-muted mb-1">Commented: ${datePosted}</p>
+    <div class="bg-light rounded p-3 mb-2">
+      <div class="d-flex align-items-center">          
+        <p class="me-2 mb-2 fw-semibold">${comment.owner}</p>
+        <small class="text-muted mb-2">${datePosted}</small>
       </div>
         <p>${comment.body}</p>
     </div>`;

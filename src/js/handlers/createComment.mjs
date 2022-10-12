@@ -1,9 +1,9 @@
 import { createComment } from "../api/posts/index.mjs";
 
 /**
- * Creating comments on a post
+ * NOT WORKING - Creating comments on a post
  */
-export function createCommentFormListener() {
+export async function createCommentFormListener() {
   const form = document.querySelector("#comment-form");
 
   const url = new URL(location.href);
@@ -16,9 +16,8 @@ export function createCommentFormListener() {
       const form = e.target;
       const formData = new FormData(form);
       const comment = Object.fromEntries(formData.entries());
-      comment.id = id;
 
-      createComment(id);
+      createComment(comment);
     });
   }
 }

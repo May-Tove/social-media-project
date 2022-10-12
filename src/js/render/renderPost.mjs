@@ -32,7 +32,7 @@ export async function renderPostHtml() {
       }
     }
 
-    // displaying comments
+    // displaying comments if there is any
     const commentSection = document.querySelector(".comment-section");
     const commentHeading = document.querySelector("#commentHeading");
     const comments = result.comments;
