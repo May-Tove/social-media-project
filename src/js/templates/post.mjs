@@ -21,7 +21,7 @@ export const postTemplate = (post) => {
           <img
             class="img-thumbnail rounded-circle me-3 d-flex justify-content-center align-items-center text-center"
             src="${avatar}"
-            alt="Profile picture of ${post.author.name}"
+            alt="Avatar"
           />
           <div>
             <h6 class="m-0">${post.author.name}</h6>
