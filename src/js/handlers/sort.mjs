@@ -4,6 +4,8 @@ import * as template from "../templates/index.mjs";
 const sortSelector = document.querySelector("#sort-posts");
 let sortedPosts = [];
 
+// ==== WORKING BUT VERY SLOW
+// ==== NEED TO FIGURE OUT HOW TO MAKE IT GO FASTER OR ADD LOADER
 /**
  *
  * @param {*} e
