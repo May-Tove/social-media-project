@@ -30,6 +30,10 @@ export function createPostFormListener() {
       const formData = new FormData(form);
       const post = Object.fromEntries(formData.entries());
 
+      if (!post.media) {
+        delete post.media;
+      }
+
       createPost(post);
     });
   }
