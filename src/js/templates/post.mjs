@@ -31,14 +31,16 @@ export const postTemplate = (post) => {
         <div id="dropdownContainer"></div>
       </div>
       <a href="/posts/post/index.html?id=${post.id}" class="post-link">
+        <div>
         <h6>${post.title}</h6>
         <p>${post.body}</p>
         <img
           src="${post.media}"
           class="img-fluid rounded mb-3 media"
         />
+        </div>
       </a>
-      <span class="badge rounded-pill text-bg-secondary mb-3">${post.tags}</span>
+      <span class="badge rounded-pill text-bg-white mb-3">${post.tags}</span>
       <div class="d-flex align-items-center border-top pt-3">
         <button class="d-flex align-items-center like-btn" id="interactionBtn">
         <i class="fa-regular fa-thumbs-up me-1"></i>
@@ -49,7 +51,7 @@ export const postTemplate = (post) => {
           Comment (${post._count.comments})
         </button>
       </div>
-      <h6 class="border-bottom pb-2 mt-4 fw-semibold d-none" id="commentHeading">Comments</h6>
+      <h6 class="pb-2 mt-4 fw-semibold d-none" id="commentHeading">Comments</h6>
       <div class="comment-section">
       </div>
       <div id="createCommentForm"></div>

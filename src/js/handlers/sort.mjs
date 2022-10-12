@@ -36,7 +36,6 @@ export async function sortPosts(e) {
     postsContainer.innerHTML = "";
     sortedPosts.forEach((post) => {
       postsContainer.innerHTML += template.postTemplate(post);
-      console.log(post);
     });
   }
 }
