@@ -31,7 +31,7 @@ export const postTemplate = (post) => {
         <div id="dropdownContainer"></div>
       </div>
       <a href="/posts/post/index.html?id=${post.id}" class="post-link">
-        <div>
+        <div class="post-content">
         <h6>${post.title}</h6>
         <p>${post.body}</p>
         <img

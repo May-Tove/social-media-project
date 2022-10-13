@@ -14,14 +14,11 @@ export async function renderPostsHtml() {
   }
 
   // if post contain no image, hide img tag from html template
-  const media = document.querySelectorAll(".media");
-  if (media) {
-    console.log(media);
-    media.forEach((img) => {
-      console.log(img.src);
-      if (img.src === " ") {
-        media.style.display = "none";
-      }
-    });
-  }
+  // Does not work?? can not figure out why, tried many things
+  const media = document.querySelector(".media-container");
+  posts.forEach((post) => {
+    if (!post.media.src === "") {
+      media.classList.add("d-none");
+    }
+  });
 }

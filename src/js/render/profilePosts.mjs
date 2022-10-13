@@ -15,6 +15,7 @@ export async function renderProfilePosts() {
   const result = posts.filter((post) =>
     post.author.name.toLowerCase().includes(author)
   );
+
   const output = result.map(templates.postTemplate);
 
   if (postsContainer) {

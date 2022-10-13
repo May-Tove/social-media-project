@@ -10958,4 +10958,8 @@ a:hover {
   background-color: #dc3545;
 }
 
+.post-content p {
+  word-wrap: break-word;
+}
+
 /*# sourceMappingURL=styles.css.map */

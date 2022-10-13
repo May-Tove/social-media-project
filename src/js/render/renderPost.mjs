@@ -11,7 +11,6 @@ export async function renderPostHtml() {
   const id = url.searchParams.get("id");
   if (id) {
     const result = await postMethods.getPost(id);
-    console.log(result.media);
 
     const postContainer = document.querySelector("#post-container");
     if (postContainer) {
@@ -33,7 +32,6 @@ export async function renderPostHtml() {
       const loggedInUser = get("user").name;
 
       if (loggedInUser === result.author.name) {
-        console.log(result.author.name);
         dropdown.innerHTML = templates.postOptions();
       }
     }
