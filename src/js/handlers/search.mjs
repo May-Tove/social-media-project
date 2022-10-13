@@ -23,15 +23,13 @@ export async function handleSearch(e) {
       post.body.toLowerCase().includes(inputValue) ||
       post.author.name.toLowerCase().includes(inputValue)
   );
+  const output = searchResult.map(postTemplate);
 
   const postsContainer = document.querySelector("#feed-container");
   if (searchResult.length === 0) {
     postsContainer.innerHTML = noResultError("No results found");
   } else {
-    postsContainer.innerHTML = "";
-    searchResult.forEach((post) => {
-      postsContainer.innerHTML += postTemplate(post);
-    });
+    postsContainer.innerHTML = output.join("");
   }
 }
 

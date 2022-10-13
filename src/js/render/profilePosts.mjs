@@ -15,15 +15,13 @@ export async function renderProfilePosts() {
   const result = posts.filter((post) =>
     post.author.name.toLowerCase().includes(author)
   );
+  const output = result.map(templates.postTemplate);
 
   if (postsContainer) {
-    postsContainer.innerHTML = "";
     if (result.length === 0) {
       postsContainer.innerHTML = noResultError("No posts yet :(");
     } else {
-      result.forEach((post) => {
-        postsContainer.innerHTML += templates.postTemplate(post);
-      });
+      postsContainer.innerHTML = output.join("");
     }
   }
 }

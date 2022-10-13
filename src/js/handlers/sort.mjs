@@ -4,8 +4,6 @@ import * as template from "../templates/index.mjs";
 const sortSelector = document.querySelector("#sort-posts");
 let sortedPosts = [];
 
-// ==== WORKING BUT VERY SLOW
-// ==== NEED TO FIGURE OUT HOW TO MAKE IT GO FASTER OR ADD LOADER
 /**
  *
  * @param {*} e
@@ -31,12 +29,11 @@ export async function sortPosts(e) {
     });
   }
 
+  const output = sortedPosts.map(template.postTemplate);
+
   const postsContainer = document.querySelector("#feed-container");
   if (postsContainer) {
-    postsContainer.innerHTML = "";
-    sortedPosts.forEach((post) => {
-      postsContainer.innerHTML += template.postTemplate(post);
-    });
+    postsContainer.innerHTML = output.join("");
   }
 }
 
