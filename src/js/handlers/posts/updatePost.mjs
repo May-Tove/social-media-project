@@ -39,6 +39,10 @@ export async function updatePostListener() {
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
+      if (!post.media) {
+        delete post.media;
+      }
+
       updatePost(post);
     });
   }
