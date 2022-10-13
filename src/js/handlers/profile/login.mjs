@@ -1,4 +1,4 @@
-import { login } from "../api/auth/login.mjs";
+import { login } from "../../api/auth/login.mjs";
 
 /**
  * This will log in a registered user when clicking the log in button

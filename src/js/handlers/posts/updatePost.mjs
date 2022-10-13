@@ -1,4 +1,4 @@
-import { getPost, updatePost } from "../api/posts/index.mjs";
+import { getPost, updatePost } from "../../api/posts/index.mjs";
 
 /**
  * Event listener to update a post on form submit

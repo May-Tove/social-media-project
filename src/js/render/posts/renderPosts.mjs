@@ -1,5 +1,5 @@
-import * as postMethods from "../api/posts/index.mjs";
-import { postTemplate } from "../templates/post.mjs";
+import * as postMethods from "../../api/posts/index.mjs";
+import { postTemplate } from "../../templates/posts/post.mjs";
 
 /**
  * Displaying all posts on the page using API call

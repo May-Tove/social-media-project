@@ -1,4 +1,4 @@
-import { createPost } from "../api/posts/index.mjs";
+import { createPost } from "../../api/posts/index.mjs";
 
 /**
  * New post gets created when submitting the form

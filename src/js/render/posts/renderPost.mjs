@@ -1,7 +1,7 @@
-import * as postMethods from "../api/posts/index.mjs";
-import * as templates from "../templates/index.mjs";
-import { noResultError } from "../components/error.mjs";
-import { get } from "../storage/index.mjs";
+import * as postMethods from "../../api/posts/index.mjs";
+import * as templates from "../../templates/index.mjs";
+import { noResultError } from "../../components/error.mjs";
+import { get } from "../../storage/index.mjs";
 
 /**
  * Displaying a single post details on the page using API call

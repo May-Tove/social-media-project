@@ -1,7 +1,7 @@
-import { getPosts } from "../api/posts/getPosts.mjs";
-import { get } from "../storage/index.mjs";
-import * as templates from "../templates/post.mjs";
-import { noResultError } from "../components/error.mjs";
+import { getPosts } from "../../api/posts/getPosts.mjs";
+import { get } from "../../storage/index.mjs";
+import * as templates from "../../templates/posts/post.mjs";
+import { noResultError } from "../../components/error.mjs";
 
 /**
  * Displaying posts created of the logged in user on the page using API call

@@ -1,4 +1,4 @@
-import { getPost, removePost } from "../api/posts/index.mjs";
+import { getPost, removePost } from "../../api/posts/index.mjs";
 
 /**
  * Event listener to delete a post on button click

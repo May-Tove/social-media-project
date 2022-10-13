@@ -1,5 +1,5 @@
-import { getProfile, updateProfile } from "../api/profile/index.mjs";
-import { get } from "../storage/index.mjs";
+import { getProfile, updateProfile } from "../../api/profile/index.mjs";
+import { get } from "../../storage/index.mjs";
 
 /**
  * Event listener to update profile media details on form submit

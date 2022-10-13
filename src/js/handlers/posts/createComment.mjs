@@ -1,4 +1,4 @@
-import { createComment } from "../api/posts/index.mjs";
+import { createComment } from "../../api/posts/index.mjs";
 
 /**
  * NOT WORKING - Creating comments on a post

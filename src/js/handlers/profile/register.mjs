@@ -1,4 +1,4 @@
-import { register } from "../api/auth/register.mjs";
+import { register } from "../../api/auth/register.mjs";
 
 /**
  * API call that register new users

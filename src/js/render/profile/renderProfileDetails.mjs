@@ -1,5 +1,5 @@
-import { getProfile } from "../api/profile/getProfile.mjs";
-import * as templates from "../templates/profile.mjs";
+import { getProfile } from "../../api/profile/getProfile.mjs";
+import * as templates from "../../templates/profile.mjs";
 
 /**
  * Displaying the profile details on the page using API call

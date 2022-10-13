@@ -1,4 +1,4 @@
-import { getPosts, reaction } from "../api/posts/index.mjs";
+import { getPosts, reaction } from "../../api/posts/index.mjs";
 
 /**
  * NOT WORKING
