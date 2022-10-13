@@ -11,12 +11,18 @@ export async function renderPostHtml() {
   const id = url.searchParams.get("id");
   if (id) {
     const result = await postMethods.getPost(id);
-    console.log(result);
+    console.log(result.media);
 
     const postContainer = document.querySelector("#post-container");
     if (postContainer) {
-      postContainer.innerHTML = "";
       postContainer.innerHTML = templates.postTemplate(result);
+    }
+
+    // if post contain no image, hide img tag from html template
+    const media = document.querySelector(".media");
+
+    if (result.media === "") {
+      media.style.display = "none";
     }
 
     // buttons to edit or delete post if the post belongs to the logged in user
@@ -36,18 +42,14 @@ export async function renderPostHtml() {
     const commentSection = document.querySelector(".comment-section");
     const commentHeading = document.querySelector("#commentHeading");
     const comments = result.comments;
+    const output = comments.map(templates.commentTemplate);
 
     if (commentSection) {
-      commentSection.innerHTML = "";
       if (comments.length === 0) {
         commentSection.innerHTML = noResultError("No comments yet :(");
       } else {
         commentHeading.classList.remove("d-none");
-
-        comments.forEach((comment) => {
-          commentSection.innerHTML += templates.commentTemplate(comment);
-          console.log(comment);
-        });
+        commentSection.innerHTML = output.join("");
       }
     }
   }
@@ -56,7 +58,6 @@ export async function renderPostHtml() {
   const createCommentForm = document.querySelector("#createCommentForm");
 
   if (createCommentForm) {
-    createCommentForm.innerHTML = "";
     createCommentForm.innerHTML = templates.createComment();
   }
 }

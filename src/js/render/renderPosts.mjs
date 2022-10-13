@@ -10,8 +10,18 @@ export async function renderPostsHtml() {
   const feedContainer = document.querySelector("#feed-container");
 
   if (feedContainer) {
-    feedContainer.innerHTML = "";
     feedContainer.innerHTML = output.join("");
-    console.log(posts);
+  }
+
+  // if post contain no image, hide img tag from html template
+  const media = document.querySelectorAll(".media");
+  if (media) {
+    console.log(media);
+    media.forEach((img) => {
+      console.log(img.src);
+      if (img.src === " ") {
+        media.style.display = "none";
+      }
+    });
   }
 }
