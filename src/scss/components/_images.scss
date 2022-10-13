@@ -23,3 +23,11 @@
   width: 30px;
   height: 30px;
 }
+
+.welcome-img {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}

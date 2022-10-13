@@ -66,3 +66,14 @@ a {
 .post-content p {
   word-wrap: break-word;
 }
+
+.welcome-section {
+  & h1 {
+    font-size: 3rem;
+  }
+
+  & h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}

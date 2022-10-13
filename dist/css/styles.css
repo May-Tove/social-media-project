@@ -10901,6 +10901,14 @@ textarea.form-control-lg {
   height: 30px;
 }
 
+.welcome-img {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}
+
 body {
   background-color: #f8f9fa;
 }
@@ -10960,6 +10968,14 @@ a:hover {
 
 .post-content p {
   word-wrap: break-word;
+}
+
+.welcome-section h1, .welcome-section .h1 {
+  font-size: 3rem;
+}
+.welcome-section h2, .welcome-section .h2 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
