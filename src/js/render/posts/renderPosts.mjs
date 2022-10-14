@@ -15,10 +15,10 @@ export async function renderPostsHtml() {
 
   // if post contain no image, hide img tag from html template
   // Does not work?? can not figure out why, tried many things
-  const media = document.querySelector(".media-container");
+  const media = document.querySelector(".media");
   posts.forEach((post) => {
-    if (!post.media.src === "") {
-      media.classList.add("d-none");
+    if (!post.media === "") {
+      media.style.display += "none";
     }
   });
 }
