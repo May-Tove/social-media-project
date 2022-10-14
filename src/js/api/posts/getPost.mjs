@@ -6,7 +6,6 @@ const endpoint = "/posts";
 /**
  * API call that gets one specific post by id
  * @param {number} id
- * @param {string} url
  * @returns Specific post
  * @example
  * ```js

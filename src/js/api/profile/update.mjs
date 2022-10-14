@@ -6,7 +6,7 @@ const method = "put";
 
 /**
  * Updating profile media details using PUT method
- * @param {object} profileData
+ * @param {object} profileData - values from input fields in form creates an object
  * @returns Updated value to existing profile
  * @example
  * ```js

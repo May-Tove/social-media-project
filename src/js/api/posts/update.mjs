@@ -6,7 +6,7 @@ const method = "put";
 
 /**
  * Updating a post using PUT method
- * @param {object} postData
+ * @param {object} postData - values from the inputs in the form create new object to be updated
  * @returns Updated value to existing post
  * @example
  * ```js

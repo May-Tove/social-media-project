@@ -6,11 +6,8 @@ const method = "post";
 const responseContainer = document.querySelector(".response-container");
 
 /**
- * API call that signup new users
- * @param {string} profile
- * ```js
- * signupUser(signupUrl, newUser);
- * ```
+ * API call that register new users
+ * @param {string} profile - values from form input
  */
 export async function register(profile) {
   const registerUrl = api_social_url + endpoint;

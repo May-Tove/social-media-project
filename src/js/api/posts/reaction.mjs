@@ -6,6 +6,7 @@ const method = "put";
 
 /**
  * Reacting to a post
+ * NOT WORKING
  */
 export async function reaction(id) {
   if (!id) {

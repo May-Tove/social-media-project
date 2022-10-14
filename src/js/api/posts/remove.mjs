@@ -6,7 +6,7 @@ const method = "delete";
 
 /**
  * Delete post using DELETE method
- * @param {number} id
+ * @param {number} id - id of the post to be deleted
  * @example
  * ```js
  * // When clicking delete button, the function will be called, deleting the post by id

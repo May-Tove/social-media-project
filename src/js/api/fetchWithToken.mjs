@@ -1,8 +1,7 @@
 import { get } from "../storage/index.mjs";
 
 /**
- *
- * @returns
+ * Setting headers with JWT token to authenticate user
  */
 export function headers() {
   const token = get("token");
@@ -14,18 +13,29 @@ export function headers() {
 }
 
 /**
- *
- * @param {String} url
- * @param {*} options
+ * Fetch with JWT access token to be able to get, create, update and remove posts and profile details
+ * @param {String} url - API url to be passed in
+ * @param {any} options - fetch options such as method and body
  * @returns
+ * @example
+ * ```js
+ * async function createPost(postData) {
+ * // URL
+ * const createPostUrl = api_social_url + endpoint;
+ *
+ * // Call fetch function and pass in url and options as parameters
+ * const response = await fetchWithAuth(createPostUrl, {
+ * method: "POST",
+ * body: JSON.stringify(postData),
+ * });
+ *
+ * return await response.json();
+ * }
+ * ```
  */
 export async function fetchWithAuth(url, options = {}) {
-  try {
-    return fetch(url, {
-      ...options,
-      headers: headers(),
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  return fetch(url, {
+    ...options,
+    headers: headers(),
+  });
 }

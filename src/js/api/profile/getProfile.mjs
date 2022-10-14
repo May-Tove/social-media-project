@@ -5,9 +5,18 @@ import { fetchWithAuth } from "../fetchWithToken.mjs";
 const endpoint = "/profiles";
 
 /**
+ * Getting profile details from API
+ * @param {string} name
+ * @returns profile details
+ * @example
+ * ```js
+ * async function renderProfile() {
+ * const profileContainer = document.querySelector("#profileDetailContainer");
+ * const profile = await getProfile();
  *
- * @param {String} name
- * @returns
+ * profileContainer.innerHTML = templates.profileTemplate(profile);
+ * }
+ * ```
  */
 export async function getProfile(name = get("user").name) {
   if (!name) {

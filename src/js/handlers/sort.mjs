@@ -5,8 +5,7 @@ const sortSelector = document.querySelector("#sort-posts");
 let sortedPosts = [];
 
 /**
- *
- * @param {*} e
+ * Event listener that sorts posts on change
  */
 export async function sortPosts(e) {
   const sortSelected = e.target.value;

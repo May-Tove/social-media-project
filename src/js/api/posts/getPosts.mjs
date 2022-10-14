@@ -5,13 +5,7 @@ const endpoint =
   "/posts?_author=true&_comments=true&reactions=true&limit=900&offset=0";
 
 /**
- * Get all posts from API using GET method
- * @param {string} url
- * @returns All posts from API
- * @example
- * ```js
- * const posts = await getPosts();
- * ```
+ * Get all posts from API using GET method(default)
  */
 export async function getPosts() {
   const getPostsUrl = `${api_social_url}${endpoint}`;

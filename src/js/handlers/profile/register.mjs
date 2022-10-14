@@ -1,11 +1,7 @@
 import { register } from "../../api/auth/register.mjs";
 
 /**
- * API call that register new users
- * @param {object} user
- * ```js
- * register(user);
- * ```
+ * Event listener that register new users on submit
  */
 export function registerFormListener() {
   const form = document.querySelector("#registerForm");
