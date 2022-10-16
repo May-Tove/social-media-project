@@ -12,20 +12,23 @@ export async function sortPosts(e) {
 
   const posts = await postMethods.getPosts();
 
-  if (sortSelected === "newest") {
-    sortedPosts = posts;
-  } else if (sortSelected === "reactions") {
-    sortedPosts = posts.sort((a, b) => {
-      return b._count.reactions - a._count.reactions;
-    });
-  } else if (sortSelected === "comments") {
-    sortedPosts = posts.sort((a, b) => {
-      return b._count.comments - a._count.comments;
-    });
-  } else if (sortSelected === "oldest") {
-    sortedPosts = posts.sort((a, b) => {
-      return new Date(a.created) - new Date(b.created);
-    });
+  switch (sortSelected) {
+    case "newest":
+      sortedPosts = posts;
+      break;
+    case "oldest":
+      sortedPosts = posts.sort(
+        (a, b) => new Date(a.created) - new Date(b.created)
+      );
+      break;
+    case "reactions":
+      sortedPosts = posts.sort(
+        (a, b) => b._count.reactions - a._count.reactions
+      );
+      break;
+    case "comments":
+      sortedPosts = posts.sort((a, b) => b._count.comments - a._count.comments);
+      break;
   }
 
   const output = sortedPosts.map(template.postTemplate);

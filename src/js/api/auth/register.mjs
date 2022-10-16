@@ -26,7 +26,7 @@ export async function register(profile) {
     responseContainer.classList.remove("d-none");
     responseContainer.innerHTML = authError("User already exists");
   } else {
-    window.location = "../../../../profile/login/index.html";
+    window.location = "/src/pages/profile/login/index.html";
   }
 
   const results = await response.json();

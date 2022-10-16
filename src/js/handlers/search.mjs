@@ -6,7 +6,7 @@ const searchInput = document.querySelector("#search-input");
 
 /**
  * Search for posts by title, body and/or author name on keyup
- * @param {event} keyup
+ * @param {event} keyup - event listens for keyup
  * @example
  * ```js
  * searchInput.addEventListener("keyup", handleSearch);

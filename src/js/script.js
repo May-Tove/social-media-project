@@ -1,7 +1,5 @@
-import { handleSearch } from "../js/handlers/search.mjs";
 import * as render from "./render/index.mjs";
 import * as listeners from "./handlers/index.mjs";
-import { logOut } from "./api/profile/index.mjs";
 
 render.getUserHeaderDetails();
 render.renderProfile();
@@ -16,5 +14,3 @@ listeners.createPostFormListener();
 listeners.updatePostListener();
 listeners.removePostListener();
 listeners.updateProfileListener();
-listeners.createCommentFormListener();
-/*listeners.reactToPostListener();*/

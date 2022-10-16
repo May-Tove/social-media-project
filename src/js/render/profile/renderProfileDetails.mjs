@@ -9,7 +9,6 @@ export async function renderProfile() {
   const profile = await getProfile();
 
   if (profileContainer) {
-    profileContainer.innerHTML = "";
     profileContainer.innerHTML = templates.profileTemplate(profile);
   }
 }

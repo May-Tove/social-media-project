@@ -22,6 +22,7 @@ export async function getProfile(name = get("user").name) {
   if (!name) {
     throw new Error("Get requires a name");
   }
+
   const getProfileUrl = `${api_social_url}${endpoint}/${name}`;
 
   const response = await fetchWithAuth(getProfileUrl);

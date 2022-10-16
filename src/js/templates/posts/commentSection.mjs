@@ -1,4 +1,3 @@
-// template for displaying comments
 export const commentTemplate = (comment) => {
   // Format Date
   let apiDate = comment.created;

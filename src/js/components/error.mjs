@@ -1,22 +1,6 @@
 /**
- * Reusable error message
- * @param {string} message
- * @example
- * ```js
- * errorContainer.innerHtml = displayError("An error occurred");
- * ```
- */
-export function displayError(message = "Unknown error") {
-  return `
-  <div class="p-4 rounded shadow-sm d-flex flex-column justify-content-center align-items-center mt-5 error-container">
-  <h5 class="error-title text-white">Error!</h5>
-  <h6 class="mb-0 text-white">${message}</h6>
-  </div>`;
-}
-
-/**
  * Error message for no results
- * @param {string} message
+ * @param {string} message - error message to be entered
  * @example
  * ```js
  * // no search results, no comments yet or no posts yet
@@ -31,7 +15,7 @@ export function noResultError(message = "No result") {
 
 /**
  * Error message for failed authentication
- * @param {string} message
+ * @param {string} message - error message to be entered
  * @example
  * ```js
  * errorContainer.innerHtml = authError("Invalid password or username");

@@ -13,30 +13,26 @@ const responseContainer = document.querySelector(".response-container");
 export async function login(profile) {
   const loginUrl = api_social_url + endpoint;
   const body = JSON.stringify(profile);
-  try {
-    const response = await fetch(loginUrl, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method,
-      body,
-    });
 
-    //Getting token and all profile details
-    const { accessToken, ...user } = await response.json();
+  const response = await fetch(loginUrl, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method,
+    body,
+  });
 
-    //Storing them in localStorage
-    storage.store("token", accessToken);
-    storage.store("user", user);
+  const { accessToken, ...user } = await response.json();
 
-    //Show error message if login failed or be redirected to homepage if login succeed
-    if (!response.ok) {
-      responseContainer.classList.remove("d-none");
-      responseContainer.innerHTML = authError("Invalid email or password");
-    } else {
-      window.location = "../../../../posts/feed/index.html";
-    }
-  } catch (error) {
-    console.log(error);
+  //Storing token and profile details in localStorage
+  storage.store("token", accessToken);
+  storage.store("user", user);
+
+  //Show error message if login failed or be redirected to homepage if login succeed
+  if (!response.ok) {
+    responseContainer.classList.remove("d-none");
+    responseContainer.innerHTML = authError("Invalid email or password");
+  } else {
+    location.href = "/src/pages/posts/feed/index.html";
   }
 }
