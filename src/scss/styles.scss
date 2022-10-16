@@ -9,15 +9,35 @@
 @import "./components/images";
 
 body {
-  background-color: $gray-100;
+  background-color: #1c1c27;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
-  color: $gray-800;
+h5,
+h6,
+p,
+small,
+strong,
+button,
+label,
+.dropdown-item,
+.fa-ellipsis,
+input,
+footer,
+img {
+  color: #fafafc;
+}
+
+.text-muted {
+  color: $gray-500 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #1c1c27;
+  color: $primary;
 }
 
 h1 {
@@ -59,10 +79,6 @@ a {
   cursor: pointer;
 }
 
-.error-container {
-  background-color: $red-500;
-}
-
 .post-content p {
   word-wrap: break-word;
 }
@@ -76,4 +92,26 @@ a {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
+}
+
+.nav-tabs .nav-link {
+  color: #fafafc;
+
+  &.active {
+    color: $primary;
+  }
+}
+
+.badge {
+  background-color: $blue;
+}
+
+.comment {
+  background-color: #2f3341;
+}
+
+.alert-danger {
+  background-color: $red;
+  color: #fafafc;
+  border: none;
 }

@@ -31,7 +31,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span><i class="fa-solid fa-bars"></i></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-lg-center mt-3 mt-lg-0">
@@ -90,10 +90,12 @@
                 </h1>
                 <button
                   type="button"
-                  class="btn-close"
+                  id="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                ></button>
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
               </div>
               <div class="modal-body">
                 <form id="editProfile">
@@ -176,9 +178,13 @@
             <div class="col-lg-4 mb-3">
               <div>
                 <nav>
-                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <div
+                    class="nav nav-tabs border-0"
+                    id="nav-tab"
+                    role="tablist"
+                  >
                     <button
-                      class="nav-link active"
+                      class="nav-link active border-0"
                       id="nav-followers-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-followers"
@@ -191,7 +197,7 @@
                       <span id="followerCount"></span>
                     </button>
                     <button
-                      class="nav-link"
+                      class="nav-link border-0"
                       id="nav-following-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-following"

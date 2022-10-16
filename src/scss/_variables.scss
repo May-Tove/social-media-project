@@ -1,4 +1,4 @@
-$white: #fff;
+$white: #252936;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -10,14 +10,14 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-$blue: #0d6efd;
-$indigo: #6610f2;
+$blue: #8df7ff;
+$indigo: #00cfdd;
 $purple: #e0d0ff;
 $pink: #d63384;
-$red: #dc3545;
-$orange: #fd7e14;
+$red: #af1c2b;
+$orange: #fdac41;
 $yellow: #ffc107;
-$green: #198754;
+$green: #4eda99;
 $teal: #20c997;
 $cyan: #0dcaf0;
 
@@ -27,7 +27,7 @@ $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $gray-100;
+$light: #44475a;
 $dark: $gray-900;
 
 $red-100: tint-color($red, 80%);
@@ -39,3 +39,5 @@ $red-600: shade-color($red, 20%);
 $red-700: shade-color($red, 40%);
 $red-800: shade-color($red, 60%);
 $red-900: shade-color($red, 80%);
+
+$border-color: #373544;

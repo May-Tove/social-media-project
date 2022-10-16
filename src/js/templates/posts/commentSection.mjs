@@ -8,7 +8,7 @@ export const commentTemplate = (comment) => {
   let datePosted = `${day}.${month}.${year}`;
 
   return `
-    <div class="bg-light rounded p-3 mb-2">
+    <div class="comment rounded p-3 mb-2">
       <div class="d-flex align-items-center">          
         <p class="me-2 mb-2 fw-semibold">${comment.owner}</p>
         <small class="text-muted mb-2">${datePosted}</small>

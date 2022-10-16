@@ -17,8 +17,12 @@
   }
 }
 
+.navbar-toggler-icon {
+  color: #fafafc;
+}
+
 .navbar-nav .nav-link {
-  color: $gray-800;
+  color: #fafafc;
 
   &:hover {
     color: $primary;

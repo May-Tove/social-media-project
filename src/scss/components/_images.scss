@@ -1,7 +1,7 @@
 .img-thumbnail {
   width: 60px;
   height: 60px;
-  border: 0.5px solid $gray-300;
+  border: 0.5px solid $gray-700;
   padding: 0;
   object-fit: cover;
 }
@@ -22,12 +22,4 @@
 .nav-img {
   width: 30px;
   height: 30px;
-}
-
-.welcome-img {
-  width: 100%;
-  max-width: 600px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 5px 0 0 5px;
 }

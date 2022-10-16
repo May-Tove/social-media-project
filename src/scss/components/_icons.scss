@@ -1,41 +1,3 @@
-.bi {
-  &-image {
-    fill: $blue;
-  }
-
-  &-tag {
-    fill: $orange;
-  }
-
-  &-heart,
-  &-heart-fill,
-  &-trash3 {
-    fill: $red;
-  }
-
-  &-chat {
-    fill: $green;
-  }
-
-  &-three-dots {
-    fill: $gray-700;
-  }
-
-  &-house,
-  &-person,
-  &-pencil-square {
-    fill: $primary;
-  }
-
-  &-heart,
-  &-chat,
-  &-heart-fill {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
 .fa {
   &-image {
     color: $orange;
@@ -47,5 +9,9 @@
 
   &-comment {
     color: $green;
+  }
+
+  &-bars {
+    color: #fafafc;
   }
 }

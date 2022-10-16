@@ -17,14 +17,14 @@
   border-radius: 5px;
 
   &:hover {
-    background-color: $gray-100;
+    background-color: #1c1c27;
   }
 }
 
 #dropdownBtn,
 #interactionBtn,
 .username-container,
-#backBtn {
+#btn-close {
   background-color: transparent;
   border: 0;
 }
@@ -32,4 +32,13 @@
 #editProfileBtn {
   bottom: 1rem;
   left: 1rem;
+}
+
+.btn-danger,
+.btn-light {
+  color: #fafafc !important;
+}
+
+#btn-close {
+  font-size: 25px;
 }
