@@ -1,5 +1,5 @@
-// template for profile details
 export const profileTemplate = (profile) => {
+  // avatar placeholder
   let avatar = "";
   if (profile.avatar === "") {
     avatar = "../../../images/avatar-placeholder.jpg";
@@ -7,9 +7,17 @@ export const profileTemplate = (profile) => {
     avatar = profile.avatar;
   }
 
+  //banner placeholder
+  let banner = "";
+  if (profile.banner === "") {
+    banner = "../../../images/banner_placeholder.jpg.jpg";
+  } else {
+    banner = profile.banner;
+  }
+
   return `
   <div class="profile-container w-100 rounded d-flex justify-content-center"
-    style="background-image: url(${profile.banner})">
+    style="background-image: url(${banner})">
     <div class="large-avatar-container">
         <img src="${avatar}" alt="Profile picture of ${profile.name}" class="profile-img img-fluid rounded-circle position-absolute top-50 start-50 translate-middle">
     </div>
