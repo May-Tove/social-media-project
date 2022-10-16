@@ -4,7 +4,6 @@ import * as listeners from "./handlers/index.mjs";
 render.getUserHeaderDetails();
 render.renderProfile();
 render.renderFormAvatar();
-render.renderProfilePosts();
 render.renderPostHtml();
 render.renderPostsHtml();
 

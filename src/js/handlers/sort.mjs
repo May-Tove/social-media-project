@@ -1,5 +1,5 @@
 import * as postMethods from "../api/posts/index.mjs";
-import * as template from "../templates/index.mjs";
+import * as template from "../templates/posts/index.mjs";
 
 const sortSelector = document.querySelector("#sort-posts");
 let sortedPosts = [];

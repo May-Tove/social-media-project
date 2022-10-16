@@ -1,5 +1,5 @@
 import * as postMethods from "../../api/posts/index.mjs";
-import { postTemplate } from "../../templates/posts/post.mjs";
+import { postTemplate } from "../../templates/posts/index.mjs";
 import { noResultError } from "../../components/error.mjs";
 
 /**

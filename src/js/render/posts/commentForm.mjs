@@ -1,4 +1,4 @@
-import { createComment } from "../../templates/index.mjs";
+import { createComment } from "../../templates/posts/index.mjs";
 
 export function displayCommentForm() {
   const createCommentForm = document.querySelector("#createCommentForm");
