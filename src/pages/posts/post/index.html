@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Homepage for Social Media" />
+    <!-- change this to be title of the actual post!! -->
+    <title>Social Media | Single post</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/155738729b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/script.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <header class="bg-white shadow sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand m-0 me-md-5" href="../feed/index.html"
+            >Social</a
+          >
+          <button
+            class="navbar-toggler p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav align-items-lg-center mt-3 mt-lg-0">
+              <li class="nav-item me-3 active">
+                <a
+                  class="nav-link d-flex align-items-center active"
+                  aria-current="page"
+                  href="../feed/index.html"
+                >
+                  Feed</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="nav-link dropdown-toggle username-container"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></button>
+                <ul class="dropdown-menu border-0">
+                  <li>
+                    <a
+                      class="dropdown-item nav-link"
+                      href="../../profile/index.html"
+                      >View Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item nav-link"
+                      id="logoutBtn"
+                      href="/src/pages/profile/login/index.html"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="min-vh-100">
+      <section class="my-5">
+        <div class="container">
+          <!------ EDIT POST FORM MODAL ------>
+          <div
+            class="modal fade"
+            id="editPostModal"
+            tabindex="-1"
+            aria-labelledby="editPostModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="editPostModalLabel">
+                    <i class="fa-regular fa-pen-to-square"></i> Edit Post
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form id="editForm" class="w-100">
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="title"
+                      aria-label="Title for new post"
+                      placeholder="Title"
+                      required
+                      maxlength="70"
+                    />
+                    <textarea
+                      class="form-control mb-2"
+                      rows="3"
+                      name="body"
+                      aria-label="Share a post"
+                      placeholder="Share something..."
+                      required
+                    ></textarea>
+                    <div
+                      class="collapse multi-collapse"
+                      id="multiCollapseMedia"
+                    >
+                      <input
+                        class="form-control mb-2"
+                        type="url"
+                        name="media"
+                        title="Please provide an image URL"
+                        placeholder="Add image URL"
+                      />
+                    </div>
+                    <div class="collapse multi-collapse" id="multiCollapseTag">
+                      <input
+                        class="form-control mb-2"
+                        type="text"
+                        name="tags"
+                        placeholder="Tags"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="modal-footer d-flex flex-column flex-sm-row justify-content-between"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-sm-0"
+                  >
+                    <button
+                      type="button"
+                      class="media-attachment border-0 d-flex align-items-center me-3"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseMedia"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseMedia"
+                    >
+                      <i class="fa-regular fa-image me-1"></i>
+                      Image
+                    </button>
+                    <button
+                      class="media-attachment border-0 d-flex align-items-center mx-1"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseTag"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseTag"
+                    >
+                      <i class="fa-solid fa-tag me-1"></i>
+                      Tags
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      form="editForm"
+                    >
+                      Save
+                    </button>
+                    <button class="btn btn-light" data-bs-dismiss="modal">
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------ DELETE POST MODAL ------>
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            aria-labelledby="deleteModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="deleteModalLabel">
+                    <i class="fa-regular fa-trash-can"></i> Delete post
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="text-center">
+                    Are you sure you want to delete this post?
+                  </h5>
+                  <p class="text-center">Action can not be undone</p>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-sm me-2 text-light"
+                      id="deleteBtn"
+                    >
+                      Delete post
+                    </button>
+                    <button
+                      class="btn btn-light btn-sm"
+                      data-bs-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------ SINGLE POST ------>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div id="post-container">
+                <div class="d-flex justify-content-center">
+                  <div class="spinner-border text-primary mt-5" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="text-center bg-white p-4">© 2022 Copyright</div>
+    </footer>
+  </body>
+</html>

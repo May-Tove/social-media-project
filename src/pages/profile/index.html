@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile page for Social Media" />
+    <title>Social Media | Profile</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/155738729b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/js/script.js" defer type="module"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!------ HEADER ------>
+    <header class="bg-white shadow sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand m-0 me-md-5" href="../posts/feed/index.html"
+            >Social</a
+          >
+          <button
+            class="navbar-toggler p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav align-items-lg-center mt-3 mt-lg-0">
+              <li class="nav-item me-3">
+                <a
+                  class="nav-link d-flex align-items-center"
+                  aria-current="page"
+                  href="../posts/feed/index.html"
+                >
+                  Feed</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="nav-link dropdown-toggle username-container active"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></button>
+                <ul class="dropdown-menu border-0">
+                  <li>
+                    <a class="dropdown-item nav-link" href="index.html"
+                      >View Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item nav-link"
+                      id="logoutBtn"
+                      href="/src/pages/profile/login/index.html"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="min-vh-100 my-5">
+      <div class="container col-lg-9">
+        <!------ EDIT PROFILE FORM MODAL ------>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  <i class="fa-regular fa-pen-to-square"></i> Edit profile
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="editProfile">
+                  <div class="mb-3">
+                    <label for="name">Name</label>
+                    <input
+                      class="form-control user-form"
+                      type="text"
+                      name="name"
+                      disabled
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input
+                      class="form-control user-form"
+                      type="email"
+                      name="email"
+                      disabled
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="avatar">Avatar</label>
+                    <input
+                      class="form-control user-form"
+                      type="url"
+                      name="avatar"
+                      required
+                      title="Avatar must be added"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="banner">Banner</label>
+                    <input
+                      class="form-control user-form"
+                      type="url"
+                      name="banner"
+                      required
+                      title="Banner image must be added"
+                    />
+                  </div>
+                  <div class="response-container"></div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="submit"
+                  form="editProfile"
+                  class="btn btn-primary"
+                  id="editBtn"
+                >
+                  Save
+                </button>
+                <button class="btn btn-light" data-bs-dismiss="modal">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!------ PROFILE DETAILS ------>
+        <div class="row justify-content-center">
+          <div class="col-lg-12 mb-4">
+            <div
+              class="bg-white p-4 rounded shadow-sm position-relative"
+              id="profileDetailContainer"
+            >
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary mt-5" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                  <!-- Content rendered in JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------ FOLLOWERS ------>
+          <div class="row justify-content-center p-0">
+            <div class="col-lg-4 mb-3">
+              <div>
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-link active"
+                      id="nav-followers-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-followers"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-followers"
+                      aria-selected="true"
+                    >
+                      Followers (2)
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-following-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-following"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-following"
+                      aria-selected="false"
+                    >
+                      Following (2)
+                    </button>
+                  </div>
+                </nav>
+                <div
+                  class="tab-content p-4 bg-white shadow-sm rounded"
+                  id="nav-tabContent"
+                >
+                  <div
+                    class="tab-pane fade show active"
+                    id="nav-followers"
+                    role="tabpanel"
+                    aria-labelledby="nav-followers-tab"
+                    tabindex="0"
+                  >
+                    <div class="d-flex align-items-center mb-3 m-2 m-lg-0">
+                      <img
+                        class="img-thumbnail rounded-circle mb-2 me-3"
+                        src="/images/pfp-1.jpg"
+                        alt="Profile picture"
+                      />
+                      <h6 class="text-center">Sarah Jones</h6>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3 m-2 m-lg-0">
+                      <img
+                        class="img-thumbnail rounded-circle mb-2 me-3"
+                        src="/images/pfp-2.jpg"
+                        alt="Profile picture"
+                      />
+                      <h6 class="text-center">David Smith</h6>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-following"
+                    role="tabpanel"
+                    aria-labelledby="nav-following-tab"
+                    tabindex="0"
+                  >
+                    <div class="d-flex align-items-center mb-3 m-2 m-lg-0">
+                      <img
+                        class="img-thumbnail rounded-circle mb-2 me-3"
+                        src="/images/pfp-1.jpg"
+                        alt="Profile picture"
+                      />
+                      <h6 class="text-center">Sarah Jones</h6>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3 m-2 m-lg-0">
+                      <img
+                        class="img-thumbnail rounded-circle mb-2 me-3"
+                        src="/images/pfp-2.jpg"
+                        alt="Profile picture"
+                      />
+                      <h6 class="text-center">David Smith</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!------ CREATE POST FORM ------>
+            <div class="col-lg-8 mb-3">
+              <div class="bg-white p-4 rounded mb-5 shadow-sm">
+                <div class="d-flex border-bottom pb-3">
+                  <div class="avatar-container"></div>
+                  <form id="createForm" class="w-100">
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="title"
+                      aria-label="Title for new post"
+                      placeholder="Title"
+                      required
+                      maxlength="70"
+                    />
+                    <textarea
+                      class="form-control mb-2"
+                      rows="3"
+                      name="body"
+                      aria-label="Share a post"
+                      placeholder="Share something..."
+                      required
+                    ></textarea>
+                    <div
+                      class="collapse multi-collapse"
+                      id="multiCollapseMedia"
+                    >
+                      <input
+                        class="form-control mb-2"
+                        type="url"
+                        name="media"
+                        title="Please provide an image URL"
+                        placeholder="Add image URL"
+                      />
+                    </div>
+                    <div class="collapse multi-collapse" id="multiCollapseTag">
+                      <input
+                        class="form-control mb-2"
+                        type="text"
+                        name="tags"
+                        placeholder="Tags"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between pt-3"
+                >
+                  <div class="d-flex align-items-center mb-3 mb-sm-0">
+                    <button
+                      type="button"
+                      class="media-attachment border-0 d-flex align-items-center me-3"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseMedia"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseMedia"
+                    >
+                      <i class="fa-regular fa-image me-1"></i>
+                      Image
+                    </button>
+                    <button
+                      class="media-attachment border-0 d-flex align-items-center mx-1"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseTag"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseTag"
+                    >
+                      <i class="fa-solid fa-tag me-1"></i>
+                      Tags
+                    </button>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    form="createForm"
+                  >
+                    Post
+                  </button>
+                </div>
+              </div>
+
+              <!------ OWNERS RECENT POSTS ------>
+              <h5 class="mt-5 mb-3">Recent posts</h5>
+              <div id="user-post-container">
+                <!-- Content rendered in JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center bg-white p-4">© 2022 Copyright</div>
+    </footer>
+  </body>
+</html>
