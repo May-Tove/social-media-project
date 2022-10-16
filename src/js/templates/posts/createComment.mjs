@@ -1,4 +1,3 @@
-// form for creating a comment on a post
 export const createComment = () => {
   return `<form
     id="comment-form"
