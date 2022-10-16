@@ -6,5 +6,3 @@ export * from "./profile/updateProfile.mjs";
 export * from "./posts/removePost.mjs";
 export * from "./search.mjs";
 export * from "./sort.mjs";
-export * from "./posts/createComment.mjs";
-export * from "./posts/reactToPost.mjs";
