@@ -13,11 +13,11 @@ export async function renderFormAvatar() {
   if (avatarContainer) {
     let avatar = "";
     if (profilePicture === "") {
-      avatar = "../../../images/avatar-placeholder.jpg";
+      avatar = "/images/avatar-placeholder.jpg";
     } else {
       avatar = profilePicture;
     }
 
-    avatarContainer.innerHTML = `<a href="../../../profile/index.html"><img src="${avatar}" alt="Profile picture of ${userName}" class="img-thumbnail rounded-circle me-3"></a>`;
+    avatarContainer.innerHTML = `<a href="../../pages/profile/index.html"><img src="${avatar}" alt="${userName}" class="img-thumbnail rounded-circle me-3"></a>`;
   }
 }

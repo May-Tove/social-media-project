@@ -9,7 +9,6 @@ export async function renderProfile() {
   const profileContainer = document.querySelector("#profileDetailContainer");
   const profile = await getProfile();
 
-  console.log(profile);
   if (profile) {
     if (profileContainer) {
       profileContainer.innerHTML = templates.profileTemplate(profile);

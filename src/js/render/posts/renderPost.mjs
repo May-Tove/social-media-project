@@ -10,7 +10,6 @@ export async function renderPostHtml() {
   const id = url.searchParams.get("id");
   if (id) {
     const result = await postMethods.getPost(id);
-    console.log(result);
 
     const postContainer = document.querySelector("#post-container");
     if (postContainer) {
