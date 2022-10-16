@@ -18,6 +18,6 @@ export async function renderFormAvatar() {
       avatar = profilePicture;
     }
 
-    avatarContainer.innerHTML = `<a href="../../pages/profile/index.html"><img src="${avatar}" alt="${userName}" class="img-thumbnail rounded-circle me-3"></a>`;
+    avatarContainer.innerHTML = `<img src="${avatar}" alt="${userName}" class="img-thumbnail rounded-circle me-3">`;
   }
 }
