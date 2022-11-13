@@ -33,13 +33,13 @@ There were also some additonal features we could add, but these were not require
 
 ## How to install and run the project
 
-Clone this repo and run npm i to install dependencies
+Clone this repo and run npm i to install dependencies:
 
-  npm i
+ npm i
 
-Run Sass build script
+Run Sass build script:
 
-  npm run build
+ npm run build
 
 ## Built with
 
