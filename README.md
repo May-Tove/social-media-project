@@ -35,11 +35,15 @@ There were also some additonal features we could add, but these were not require
 
 Clone this repo and run npm i to install dependencies:
 
- npm i
+```
+npm i
+```
 
 Run Sass build script:
-
- npm run build
+ 
+```
+npm run build
+```
 
 ## Built with
 
