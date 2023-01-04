@@ -1,6 +1,7 @@
 import { getProfile } from "../../api/profile/getProfile.mjs";
 import * as templates from "../../templates/profile/index.mjs";
 import * as render from "./index.mjs";
+import * as listeners from "../../handlers/index.mjs";
 
 /**
  * Displaying the profile details on the page using API call
@@ -14,8 +15,9 @@ export async function renderProfile() {
       profileContainer.innerHTML = templates.profileTemplate(profile);
     }
 
-    render.renderFollowers();
-    render.renderFollowing();
+    render.renderFollowers(profile);
+    render.renderFollowing(profile);
     render.renderProfilePosts();
+    listeners.updateProfileListener(profile);
   }
 }

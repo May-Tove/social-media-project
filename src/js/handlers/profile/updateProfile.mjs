@@ -1,18 +1,16 @@
-import { getProfile, updateProfile } from "../../api/profile/index.mjs";
+import { updateProfile } from "../../api/profile/index.mjs";
 import { get } from "../../storage/index.mjs";
 
 /**
  * Event listener to update profile media details on form submit
  */
-export async function updateProfileListener() {
+export async function updateProfileListener(profile) {
   const form = document.querySelector("#editProfile");
 
   if (form) {
     const { name, email } = get("user");
     form.name.value = name;
     form.email.value = email;
-
-    const profile = await getProfile(name);
 
     form.banner.value = profile.banner;
     form.avatar.value = profile.avatar;

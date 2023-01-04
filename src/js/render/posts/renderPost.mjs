@@ -1,6 +1,7 @@
 import * as postMethods from "../../api/posts/index.mjs";
 import * as templates from "../../templates/posts/index.mjs";
 import * as render from "./index.mjs";
+import * as listeners from "../../handlers/index.mjs";
 
 /**
  * Displaying a single post details on the page using API call
@@ -16,11 +17,11 @@ export async function renderPostHtml() {
       postContainer.innerHTML = templates.postTemplate(result);
     }
 
-    // buttons to edit or delete post
+    render.renderTags(result.tags);
     render.displayPostOptions(result.author.name);
-
-    // displaying comments
-    render.renderComments();
+    render.renderComments(result);
+    listeners.removePostListener(result.id);
+    listeners.updatePostListener(result, result.id);
   }
 
   // displaying comment form

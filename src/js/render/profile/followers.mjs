@@ -1,10 +1,7 @@
-import { getProfile } from "../../api/profile/getProfile.mjs";
 import * as templates from "../../templates/profile/index.mjs";
 import { noResultError } from "../../components/error.mjs";
 
-export async function renderFollowers() {
-  const profile = await getProfile();
-
+export async function renderFollowers(profile) {
   const followers = profile.followers;
   const output = followers.map(templates.followers);
 

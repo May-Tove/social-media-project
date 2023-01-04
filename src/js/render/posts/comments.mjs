@@ -1,12 +1,7 @@
-import { getPost } from "../../api/posts/getPost.mjs";
 import { commentTemplate } from "../../templates/posts/commentSection.mjs";
 import { noResultError } from "../../components/error.mjs";
 
-export async function renderComments() {
-  const url = new URL(location.href);
-  const id = url.searchParams.get("id");
-  const post = await getPost(id);
-
+export async function renderComments(post) {
   const comments = post.comments;
   const output = comments.map(commentTemplate);
 
