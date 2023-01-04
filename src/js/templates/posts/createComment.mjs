@@ -9,6 +9,7 @@ export const createComment = () => {
       aria-label="Write a comment"
       placeholder="Leave a comment..."
       required
+      name="body"
       id="post-input"
     ></textarea>
     <div class="d-flex justify-content-end">
