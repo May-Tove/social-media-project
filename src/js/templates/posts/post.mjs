@@ -1,7 +1,7 @@
 export const postTemplate = (post) => {
   // avatar placeholder
   let avatar = "";
-  if (post.author.avatar === "") {
+  if (post.author.avatar === "" || post.author.avatar === null) {
     avatar = "/images/avatar-placeholder.jpg";
   } else {
     avatar = post.author.avatar;
