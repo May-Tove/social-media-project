@@ -47,7 +47,7 @@ export const postTemplate = (post) => {
         ${image}
         </div>
       </a>
-      <span class="badge rounded-pill mb-3">${post.tags}</span>
+      <div class="tag-container"></div>
       <div class="d-flex align-items-center border-top pt-3">
         <button class="d-flex align-items-center like-btn" id="interactionBtn" type="button">
         <i class="fa-regular fa-thumbs-up me-1"></i>
