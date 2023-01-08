@@ -1,7 +1,44 @@
-.btn-primary{
-    &:hover{
-        background-color: transparent;
-        border: 1px solid $primary;
-        color: $primary;
-    }
+.btn-primary {
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+}
+
+#edit-btn,
+#delete-btn {
+  background-color: transparent;
+}
+
+.media-attachment {
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #1c1c27;
+  }
+}
+
+#dropdownBtn,
+#interactionBtn,
+.username-container,
+#btn-close {
+  background-color: transparent;
+  border: 0;
+}
+
+#editProfileBtn {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.btn-danger,
+.btn-light {
+  color: #fafafc !important;
+}
+
+#btn-close {
+  font-size: 25px;
 }

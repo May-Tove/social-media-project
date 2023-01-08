@@ -1,27 +1,42 @@
-.navbar-brand{
-    font-size: 30px;
-    font-weight: bold;
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+  color: $primary;
+
+  &:hover {
+    color: $indigo-600;
+    text-decoration: none;
+  }
+}
+
+.navbar-toggler-icon {
+  color: #fafafc;
+}
+
+.navbar-nav .nav-link {
+  color: #fafafc;
+
+  &:hover {
     color: $primary;
+    text-decoration: none;
+  }
 
-    &:hover{
-        color: $indigo-600;
-        text-decoration: none;
-    }
+  &.active {
+    color: $primary;
+    font-weight: 500;
+  }
 }
 
-.nav-link{
-
-    color: $gray-600;
-
-    &:hover{
-        color: $gray-900;
-        text-decoration: none;
-    }
-
-    &.active{
-        font-weight: 500;
-    }
-
+@media (min-width: 1024px) {
+  .navbar-brand {
+    font-size: 30px;
+  }
 }
-
-

@@ -1,8 +1,32 @@
-.form-control {
+.form-control,
+.form-select,
+.input-group-text {
   border: none;
-  background-color: $gray-200;
+  background-color: #2f3341;
+  color: #fafafc;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: #c9c9c9;
+  }
+
+  &:focus {
+    color: #fafafc;
+  }
+
+  &:disabled {
+    background-color: #1c1c27;
+    color: #989898;
+  }
 }
 
-.search-form {
-  background-color: $gray-300;
+.user-form {
+  background-color: #2f3341;
+}
+
+#searchForm {
+  width: 270px;
 }

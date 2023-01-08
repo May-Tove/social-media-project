@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Activity feed for Social" />
+    <title>Social Media | Feed</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/155738729b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/js/script.js" defer type="module"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!---------- HEADER ---------->
+    <header class="bg-white shadow sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand m-0 me-md-5" href="index.html">Social</a>
+          <button
+            class="navbar-toggler p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav align-items-lg-center mt-3 mt-lg-0">
+              <li class="nav-item me-3 active">
+                <a
+                  class="nav-link d-flex align-items-center active"
+                  aria-current="page"
+                  href="index.html"
+                >
+                  Feed</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="nav-link dropdown-toggle username-container"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></button>
+                <ul class="dropdown-menu border-0">
+                  <li>
+                    <a
+                      class="dropdown-item nav-link"
+                      href="../../profile/index.html"
+                      >View Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item nav-link"
+                      id="logoutBtn"
+                      href="/src/pages/profile/login/index.html"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="min-vh-100">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <!---------- CREATE POST FORM ---------->
+            <h2 class="mb-3">Create a post</h2>
+            <div class="bg-white p-4 rounded mb-5 shadow-sm">
+              <div class="d-flex border-bottom pb-3">
+                <div class="avatar-container"></div>
+                <form id="createForm" class="w-100">
+                  <input
+                    class="form-control mb-2"
+                    type="text"
+                    name="title"
+                    aria-label="Title for new post"
+                    placeholder="Title"
+                    required
+                    maxlength="70"
+                  />
+                  <textarea
+                    class="form-control mb-2"
+                    rows="3"
+                    name="body"
+                    aria-label="Share a post"
+                    placeholder="Share something..."
+                    required
+                  ></textarea>
+                  <div class="collapse multi-collapse" id="multiCollapseMedia">
+                    <input
+                      class="form-control mb-2"
+                      type="url"
+                      name="media"
+                      title="Please provide an image URL"
+                      placeholder="Add image URL"
+                    />
+                  </div>
+                  <div class="collapse multi-collapse" id="multiCollapseTag">
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="tags"
+                      placeholder="Tags"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between pt-3"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-start mb-3 mb-sm-0"
+                >
+                  <button
+                    type="button"
+                    class="media-attachment border-0 d-flex align-items-center me-3"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseMedia"
+                    aria-expanded="false"
+                    aria-controls="multiCollapseMedia"
+                  >
+                    <i class="fa-regular fa-image me-1"></i>
+                    Image
+                  </button>
+                  <button
+                    class="media-attachment border-0 d-flex align-items-center mx-1"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseTag"
+                    aria-expanded="false"
+                    aria-controls="multiCollapseTag"
+                  >
+                    <i class="fa-solid fa-tag me-1"></i>
+                    Tags
+                  </button>
+                </div>
+                <button type="submit" class="btn btn-primary" form="createForm">
+                  Post
+                </button>
+              </div>
+            </div>
+
+            <!---------- FEED ---------->
+            <h2 class="col-auto my-5 pt-5 text-center">Activity feed</h2>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <form class="input-group w-100" role="search" id="searchForm">
+                  <span class="input-group-text border-0">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <input
+                    type="search"
+                    class="form-control search-form"
+                    placeholder="Search posts.."
+                    aria-label="Search"
+                    id="search-input"
+                  />
+                </form>
+              </div>
+              <select
+                name="sort-posts"
+                id="sort-posts"
+                class="form-select w-auto"
+                aria-label="Default select example"
+              >
+                <option selected value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="reactions">Most reactions</option>
+                <option value="comments">Most commented</option>
+              </select>
+            </div>
+
+            <!---------- Container for all posts from API ---------->
+            <div id="feed-container">
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary mt-5" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center bg-white p-4">© 2022 Copyright</div>
+    </footer>
+  </body>
+</html>

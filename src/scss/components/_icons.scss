@@ -1,31 +1,17 @@
-.bi{
-    &-image{
-        fill: $blue;
-    }
+.fa {
+  &-image {
+    color: $orange;
+  }
+  &-tag,
+  &-thumbs-up {
+    color: $primary;
+  }
 
-    &-camera-video{
-        fill: $orange;
-    }
+  &-comment {
+    color: $green;
+  }
 
-    &-paperclip{
-        fill: $green;
-    }
-
-    &-heart, &-heart-fill{
-        fill: $red;
-    }
-
-    &-chat{
-        fill: $green;
-    }
-
-    &-house, &-person{
-        fill: $primary;
-    }
-
-    &-heart, &-chat, &-heart-fill{
-        &:hover{
-            cursor: pointer;
-        }
-    }
+  &-bars {
+    color: #fafafc;
+  }
 }
