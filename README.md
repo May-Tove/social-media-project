@@ -2,6 +2,10 @@
 
 ![Preview](./images/social_mockup.png)
 
+### Hosted on Netlify
+
+[Live site](https://social-cross-course.netlify.app/index.html)
+
 ## About
 
 A project i have been working on during my third semester at Noroff with focus on Bootstrap, SCSS and Vanilla Javascript. It is a social media platform for students and teachers at Noroff, using Noroff's own API database. During this project i have gained a deeper understanding of JS and leanred to split the code in modules and use imports and export to make it as DRY as possible.
@@ -27,13 +31,6 @@ The following user stories were required for a passing submission:
 - User can update a post content item
 - User can delete a post content item
 
-There were also some additonal features we could add, but these were not required:
-
-- User can create a comment on a post
-- User can edit profile media
-- User can follow/unfollow a profile
-- User can react to a post content item
-
 ## How to install and run the project
 
 Clone this repo and run npm i to install dependencies:
@@ -53,3 +50,4 @@ npm run build
 - SCSS
 - Bootstrap
 - Javascript
+- [Noroff Social API](https://noroff-api-docs.netlify.app/social-endpoints/authentication)
