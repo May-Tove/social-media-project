@@ -1,6 +1,9 @@
 # Social Media Project
 
+![Preview](./images/social_mockup.png)
+
 ## About
+
 A project i have been working on during my third semester at Noroff with focus on Bootstrap, SCSS and Vanilla Javascript. It is a social media platform for students and teachers at Noroff, using Noroff's own API database. During this project i have gained a deeper understanding of JS and leanred to split the code in modules and use imports and export to make it as DRY as possible.
 
 During the first course, CSS frameworks, the assignment was to first build the design for the project homepage, profile page and login page using Bootstrap and SASS. We had to deliver the following cireterias:
@@ -40,7 +43,7 @@ npm i
 ```
 
 Run Sass build script:
- 
+
 ```
 npm run build
 ```
